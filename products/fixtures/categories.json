@@ -1,0 +1,13 @@
+[
+    {
+      "pk": 1,
+      "model": "products.Category",
+      "fields": { "name": "classic_art", "friendly_name": "Classic Art" }
+    },
+    {
+      "pk": 2,
+      "model": "products.Category",
+      "fields": { "name": "digital_art", "friendly_name": "Digital Art" }
+    }
+  ]
+  

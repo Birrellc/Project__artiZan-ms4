@@ -1,0 +1,322 @@
+[
+    {
+        "pk": 1,
+        "model": "products.Art",
+        "fields": {
+            "name": "Abstraction",
+            "sku": "aw1000001",
+            "artist": "Steve Johnson",
+            "price": 100.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/abstraction.jpg",
+            "image": "abstraction.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.Art",
+        "fields": {
+            "name": "Angelic Waves",
+            "sku": "aw1000002",
+            "artist": "Anni Roenkae",
+            "price": 120.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/angelic_waves.jpg",
+            "image": "angelic_waves.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.Art",
+        "fields": {
+            "name": "Peonies Bloom",
+            "sku": "aw1000003",
+            "artist": "Irina Iriser",
+            "price": 70.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/peonies_bloom.jpg",
+            "image": "peonies_bloom.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.Art",
+        "fields": {
+            "name": "Blue Nebula",
+            "sku": "aw1000004",
+            "artist": "Racta Populous",
+            "price": 50.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/blue_nebula.jpg",
+            "image": "blue_nebula.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.Art",
+        "fields": {
+            "name": "Blue Ripple",
+            "sku": "aw1000005",
+            "artist": "Dids",
+            "price": 30.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/blue_ripple.jpg",
+            "image": "blue_ripple.jpg",
+            "sold": true
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.Art",
+        "fields": {
+            "name": "Contrast Landscape",
+            "sku": "aw1000006",
+            "artist": "Pok Rie",
+            "price": 90.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/contrast_landscape.jpg",
+            "image": "contrast_landscape.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.Art",
+        "fields": {
+            "name": "Corregation",
+            "sku": "aw1000007",
+            "artist": "Steve Johnson",
+            "price": 50.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/corregation.jpg",
+            "image": "corregation.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.Art",
+        "fields": {
+            "name": "Dune Beach",
+            "sku": "aw1000008",
+            "artist": "Jot",
+            "price": 30.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/dune_beach.jpg",
+            "image": "dune_beach.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.Art",
+        "fields": {
+            "name": "Grapes",
+            "sku": "aw1000009",
+            "artist": "Sergio Cerrato",
+            "price": 40.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/grapes.jpg",
+            "image": "grapes.jpg",
+            "sold": true
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.Art",
+        "fields": {
+            "name": "Horses",
+            "sku": "aw1000010",
+            "artist": "ArtTower",
+            "price": 25.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/horses.jpg",
+            "image": "horses.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.Art",
+        "fields": {
+            "name": "Last Knight",
+            "sku": "aw1000011",
+            "artist": "Yuri B",
+            "price": 95.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/last_knight.jpg",
+            "image": "last_knight.jpg",
+            "sold": false
+        }
+    }, 
+    {
+        "pk": 12,
+        "model": "products.Art",
+        "fields": {
+            "name": "Mediterranean Village",
+            "sku": "aw1000012",
+            "artist": "ArtTower",
+            "price": 99.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/mediterranean_village.jpg",
+            "image": "mediterranean_village.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.Art",
+        "fields": {
+            "name": "Patchwork",
+            "sku": "aw1000013",
+            "artist": "Steve Johnson",
+            "price": 140.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/patchwork.jpg",
+            "image": "patchwork.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.Art",
+        "fields": {
+            "name": "Purple Cosmos",
+            "sku": "aw1000014",
+            "artist": "Anni Roenkae",
+            "price": 30.00,
+            "category": 2,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/purple_cosmos.jpg",
+            "image": "purple_cosmos.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.Art",
+        "fields": {
+            "name": "Rustic Wall",
+            "sku": "aw1000015",
+            "artist": "Racta Populous",
+            "price": 200.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/rustic_wall.jpg",
+            "image": "rustic_wall.jpg",
+            "sold": true
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.Art",
+        "fields": {
+            "name": "Splash",
+            "sku": "aw1000016",
+            "artist": "Dids",
+            "price": 70.00,
+            "category": 1,
+            "height": 18.0,
+            "width": 10.0,
+            "image_path":"media/splasyh.jpg",
+            "image": "splash.jpg",
+            "sold": false
+        }
+    }, 
+    {
+        "pk": 17,
+        "model": "products.Art",
+        "fields": {
+            "name": "Spring Forest",
+            "sku": "aw1000017",
+            "artist": "Daniel Ap",
+            "price": 30.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/spring_forest.jpg",
+            "image": "spring_forest.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.Art",
+        "fields": {
+            "name": "Summer Travels",
+            "sku": "aw1000018",
+            "artist": "Racta Populous",
+            "price": 50.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/summer_travels.jpg",
+            "image": "summer_travels.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.Art",
+        "fields": {
+            "name": "Urban Awake",
+            "sku": "aw1000019",
+            "artist": "Snapwire",
+            "price": 80.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/urban_awake.jpg",
+            "image": "urban_awake.jpg",
+            "sold": false
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.Art",
+        "fields": {
+            "name": "Winter land",
+            "sku": "aw1000020",
+            "artist": "Snapwire",
+            "price": 75.00,
+            "category": 1,
+            "height": 16.0,
+            "width": 20.0,
+            "image_path":"media/winter_land.jpg",
+            "image": "winter_land.jpg",
+            "sold": false
+        }
+    }                                                      
+]
