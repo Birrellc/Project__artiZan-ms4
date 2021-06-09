@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color:black !important;
+}
+
+.topnav {
+  background: rgba(255, 255, 255,0.99)
+}
+
+.border-black {
+  border: 1px solid black !important;
+}
+
+/* Index */
+
+.home-container {
+  background: url('/media/home2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-head {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 3.5rem;
+  font-weight: 500 !important;
+  color: #fff !important;
+}
+
+.btn {
+  background: grey;
+  color: white !important;
+}
+
+/* gallery */
+
+.gallery-title{
+  margin-top: 180px !important;
+}
+
+.details-container{
+  margin-top: 180px !important;
+}
+
+.badge {
+  color: black;
+}
+
+.btt-btn {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.btt-cursor {
+  cursor: pointer;
+}
