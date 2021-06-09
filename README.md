@@ -1,59 +1,285 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Birrellc,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# ArtiZan
 
 ---
 
-Happy coding!
+## Description
+
+![PICTURE]() - responsively img placeholder
+
+_this is a fictitious website created for my milestone project 4 with the code institute_.
+
+An Ecommerce website created with django where there main purpose is for the user to view and purchase art pieces.
+
+---
+
+## Table of Contents
+
+---
+
+## UX
+
+### Wireframes
+
+The initial wireframes for this project [Wireframes](https://github.com/Birrellc/artiZan/blob/master/readme-images/)
+
+---
+
+### Database
+
+
+### User Stories
+
+#### All Users:
+
+- As a user i would like to access the site on my mobile, tablet, and desktop without issues.
+
+- As a user i would like to easily navigate through the website to achieve my goal with ease.
+
+- As a user i would like to be able to contact the owner/business with ease.
+
+- As a user i would like to find the information of the artworks displayed with the products (eg. dimensions / artist name etc)
+
+- As a user i would like to be able to add items to a shopping basket which i can then view and remove items before purchase if needed.
+
+- As a user i would like to see the complete breakdown of the purchase i'm making.
+
+- As a user i would like to be able to securely purchase artwork.
+
+- As a user i would like to receive an email confirmation once I complete the payment.
+
+- As a user i would like to be able to make an account to make purchases.
+
+#### Returning Users:
+
+- As a user i would like to be able to login to my existing account for making purchases.
+
+- As a user i would like to be able to view past orders
+
+- As a user i would like to be able to see and update my personal information.
+
+- As a user i would like to be able to make purchases quicker by having previously stored my information.
+
+#### Owner:
+
+- As the owner i would like to be able to edit and delete products to the website.
+
+- As the owner i would like to provide a way for the user to contact us for example with a contact form.
+
+- As the owner i would like to have social media icons present on the website for proofing.
+
+
+#### Goals Derived From User Stories:
+
+- Create a responsive website design.
+
+- Make sure social media is visable for proofing.
+
+- Provide CRUD functionality (adding updating viewing and deleting products).
+
+- Secure login system.
+
+- Payment gateway (for users to make purchases).
+
+---
+
+### Landing Page
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
+### Strategy Plane
+
+
+
+---
+
+### Scope
+
+
+
+---
+
+### Structure
+
+
+
+---
+
+### Skeleton
+
+
+
+---
+
+### Surface
+
+#### Color Scheme
+
+
+
+#### Font
+
+
+
+#### Images
+
+
+---
+
+## Features
+
+### Website Features
+
+
+
+
+### Features to be Implemented in the Future
+
+
+
+---
+
+## Security
+
+### Project Security
+
+
+
+---
+
+## Technologies
+
+### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+
+### Frameworks
+
+- [jQuery](https://jquery.com/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+
+### Workspace
+
+- [VSCode](https://code.visualstudio.com/)
+- [Gitpod](https://www.gitpod.io/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+
+### External Resources
+
+- [Google Fonts](https://fonts.google.com/) - Used to import fonts for the website.
+- [W3C HTML Validator](https://validator.w3.org/) - Used to test/validate HTML code on the website.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test/validate the CSS code on the website.
+- [Pexels](https://https://www.pexels.com/) - Stock image resource.
+- [Tinypng](http://https://tinypng.com/) - Website used to compress my images to allow for faster loading times.
+- [Font Awesome](https://fontawesome.com/) - Used to provide small icons for the website. eg. Testimonial quotes section.
+- [Stack Overflow](https://stackoverflow.com/) - Resource for solving problems.
+- [Responsivley App](https://responsively.app/) - Used to test responsive web apps.
+- [Real Favicon Generator](https://realfavicongenerator.net/) - Used to create my favicon image and also test to see if it was working.
+- [Spell Checker for Chrome](https://chrome.google.com/webstore/detail/spell-checker-for-chrome/jfpdnkkdgghlpdgldicfgnnnkhdfhocg?hl=en) - Used to spell check my **README.md** & **testing.md**.
+- [W3 Schools](https://www.w3schools.com/) - Used as a general resource to help with coding.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Used to create mockup of responsive website for **README.md**.
+- [Youtube](https://www.w3schools.com/) - Used as a general resource for help with code.
+- [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes.
+- [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) - Used to create my **README.md** & **Testing.md** files.
+- [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) - Used throughout the website for help with all Flask Framework issues.
+- [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) - Used to help setup my forms for the website.
+- [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
+- Code institute Slack Community - Used for inspiration for my website.
+
+### Dependencies
+
+
+
+---
+
+## Testing
+
+Testing has is logged in its own document [HERE]() - testing placeholder
+
+---
+
+## Project Barriers
+
+
+
+### Known Bugs
+
+
+
+---
+
+## Deployment
+
+
+
+### Prerequisites
+
+
+
+### Cloning from GitHub
+
+- Head over to the repository location here(insert link later)
+- Click the 'code' button and download the zip file from the repository or alternatively you can clone the repository by using the following url in your terminal with the commands:
+
+``` git clone "project link" ```
+
+### IDE
+
+- Open the application in your IDE.
+- In your IDE terminal with the Application folder open type
+``` python -m pip -r requirements.txt ```
+- This will install the required modules for the application
+
+
+
+
+### Heroku
+
+- First ensure a "Procfile" is created and your requirements.txt is up to date, do this by using the following commands:
+``` pip3 freeze --local > requirements.txt ```
+``` echo web: python app.py > Procfile ```
+- Next login to your Heroku account and create a new app.
+- Make sure you have a GitHub Repository for this project.
+- You can then add Heroku to your GitHub Repository by heading to your settings then pasting the URL in your terminal for example:
+
+``` git remote add heroku https://git.heroku.com/your-heroku-git-url-here ```
+
+- You can then push to heroku with the following command in your terminal:
+
+``` git push heroku master ```
+
+- Once you are ready to prepare the application for deployment and launch use the command:
+
+
+---
+
+## Credits
+
+-
+
+### Media
+
+- The only image for this project were taken from [Pexels](https://https://www.pexels.com/)
