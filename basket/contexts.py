@@ -12,13 +12,13 @@ def basket_contents(request):
     basket = request.session.get('basket', {})
 
     for item_id, quantity in basket.items():
-        products = get_object_or_404(Art, pk=item_id)
-        total += quantity * products.price
+        product = get_object_or_404(Art, pk=item_id)
+        total += quantity * product.price
         product_count += quantity
         basket_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'products': products,
+            'product': product,
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
