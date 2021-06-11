@@ -1,4 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import (
+     render, redirect, HttpResponse, get_object_or_404
+)
+from django.contrib import messages
+from products.models import Art
 
 # Create your views here.
 
@@ -24,3 +28,21 @@ def add_to_basket(request, item_id):
     request.session['basket'] = basket
     print(request.session['basket'])
     return redirect(redirect_url)
+
+
+def remove_from_basket(request, item_id):
+    """Remove the item from the shopping basket"""
+
+    try:
+        product = get_object_or_404(Art, pk=item_id)
+        basket = request.session.get('basket', {})
+
+        basket.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your basket')
+
+        request.session['basket'] = basket
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
