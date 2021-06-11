@@ -87,7 +87,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+{{ block.super }}
 <script type="text/javascript">
     $('.btt-cursor').click(function(e) {
         window.scrollTo(0,0)
