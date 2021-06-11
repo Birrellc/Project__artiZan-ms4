@@ -22,7 +22,7 @@
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Remove</th>
                                 </tr>
                             </thead>
 
@@ -42,10 +42,6 @@
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
                                         <a class="remove-item text-danger float-right"
                                             id="remove_{{ item.item_id }}">
                                             <i class="fas fa-times-circle"></i>
