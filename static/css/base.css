@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin-top: 170px !important;
+}
+
 a {
   color:black !important;
 }
