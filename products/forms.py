@@ -6,7 +6,10 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Art
-        fields = '__all__'
+        fields = ('name', 'sku', 'artist',
+                  'price', 'category',
+                  'height', 'width', 'image',
+                  'sold',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
