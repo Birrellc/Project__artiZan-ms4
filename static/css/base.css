@@ -14,7 +14,7 @@
 body {
   margin-top: 170px;
   color: #111;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 a {
@@ -107,10 +107,43 @@ a {
   margin-bottom: 20px;
 }
 
-/* gallery */
+/* Store */
+
+.store-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.products-sub-nav {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.product-dropdown{
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 5px;
+}
 
 .badge {
-  color: black;
+  color: #3B3534;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight:800
 }
 
 .btt-btn {
