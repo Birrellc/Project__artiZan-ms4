@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="">
+        <h3 class="">Contact</h3>
+        <div class="row">
+            <div class="">
+                {% for contact in contacts %}
+                    <div>
+                    {% if contact.tel == null %}
+                        <p class="small"><span class="bold">{{ contact.label }}: </span>{{ contact.email }}</p>
+                    </div>
+                    <div>
+                    {% else %}
+                    <p class="small"><span class="bold">{{ contact.label }}: </span>{{ contact.tel }}</p>
+                    {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}
