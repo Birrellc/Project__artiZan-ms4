@@ -7,10 +7,10 @@ from .models import ContactDetails
 def contact(request):
     """ A view to show contact information """
 
-    addresses = ContactDetails.objects.all()
+    contact = ContactDetails.objects.all()
 
     context = {
-        'addresses': addresses,
+        'contact': contact,
     }
 
     return render(request, 'contact/contact.html', context)
