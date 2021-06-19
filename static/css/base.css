@@ -26,7 +26,7 @@ a {
 }
 
 .banner {
-  background-color:#111;
+  background-color: #111;
   color: aliceblue;
 }
 
@@ -40,6 +40,14 @@ a {
   justify-content: center;
   align-items: center;
   width: 50%;
+}
+
+.sub-navbar{
+  display:flex;
+  justify-content: center;
+  height: 30px;
+  letter-spacing: 10px;
+  font-weight:800;
 }
 
 /* Home */
@@ -69,12 +77,15 @@ a {
   width: 100px;
 }
 
+/* carousel */
+
 .carousel-home {
   padding-top: 50px;
 }
 
 .carousel-inner img {
   margin: auto;
+  width: 75%;
 }
 
 .img-border {
@@ -88,8 +99,12 @@ a {
 
 .about-container {
   padding-top: 70px;
-  margin: auto;
-  padding-right: 100px;
+  text-align: center;
+}
+
+.about-header {
+  border-bottom: 2px solid #111;
+  margin-bottom: 20px;
 }
 
 /* gallery */
@@ -197,4 +212,12 @@ a {
 
 .footer a:hover {
   color: #ffc717;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+  .about-container {
+    padding-right: 80px;
+  }
 }

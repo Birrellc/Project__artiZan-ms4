@@ -1,4 +1,4 @@
-<div id="topnav" class="topnav row bg-white pt-lg-1 d-none d-lg-flex">
+<nav id="topnav" class="topnav row bg-white pt-lg-1 d-none d-lg-flex">
     <div class="col-12 col-lg-3 my-auto text-center">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font text-black my-0">ArtiZan</h2>
@@ -63,7 +63,25 @@
             </li>
         </ul>
     </div>
-</div>
+    <div class="row">
+            <div class="col-12 sub-navbar">
+                <ul class="navbar-nav d-block mr-auto text-uppercase">
+                    <li class="nav-item active list-inline-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item list-inline-item">
+                        <a class="nav-link" href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item list-inline-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item list-inline-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                  </ul>
+            </div>  
+    </div>
+</nav>
 <div class="row bg-white">
     <nav class="navbar navbar-expand-lg navbar-light w-100">
         <li class="list-inline-item dropdown">
