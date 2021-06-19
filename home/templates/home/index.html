@@ -1,17 +1,82 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
-    <div class="container home-container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="cta-head text-uppercase">
-                    Discover Art
-                </h1>
-                <div class="cta-btn">
-                    <a href="#" class="btn">Browse</a>
-                </div>
-            </div>
-        </div>
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="container home-container">
+  <div class="row">
+    <div class="col-12">
+      <img
+        class="img-fluid home-img"
+        src="{{ MEDIA_URL }}home-bg2.jpg"
+        alt="Home image"
+      />
     </div>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-12 cta-container">
+        <a href="#" class="btn cta-btn text-uppercase">Browse</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade carousel-home"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="{{ MEDIA_URL }}last_knight.jpg"
+                class="d-block w-50 img-border"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{{ MEDIA_URL }}urban_awake.jpg"
+                class="d-block w-50 img-border"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{{ MEDIA_URL }}blue_nebula.jpg"
+                class="d-block w-50 img-border"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="about-container">
+          <h2 class="about-header text-center">About Us</h2>
+          <p>
+            We are a newly founded 'Art Print' sales website with the goal of
+            providing easy to access prints of popular art pieces and also in
+            the future allow users to submit their own art to be sold as prints
+            also!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
