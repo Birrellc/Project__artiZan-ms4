@@ -44,7 +44,7 @@
             <div class="gallery-container col-12">
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 my-3 col-lg-4">
+                        <div class="col-sm-6 my-3 col-lg-3">
                             <div class="card border rounded-0 h-100">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -64,15 +64,20 @@
                                     </div>
                                     {% if product.category %}
                                     <p class="small">
-                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <a class="text-muted" hreef="{% url 'products' %}?category={{ product.category.name }}">
                                             {{ product.category.friendly_name }}
                                         </a>
                                     </p>
                                     {% endif %}
+                                    <div>
+                                        <div class="col-12 mb-2">
+                                            <a href="{% url 'product_detail' product.id %}" class="btn cta-btn text-uppercase">View</a>
+                                          </div>    
+                                    </div>
                                     {% if request.user.is_superuser %}
                                                 <small class="ml-5">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    <a class="text-success" href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i></a> | 
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}"><i class="fas fa-trash-alt"></i></a>
                                                 </small>
                                     {% endif %}
                                 </div>

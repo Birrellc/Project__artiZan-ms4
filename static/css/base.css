@@ -52,13 +52,6 @@ a {
 
 /* Home */
 
-.cta-head {
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 3.5rem;
-  font-weight: 500 !important;
-  color: #fff !important;
-}
-
 .btn {
   background: grey;
   color: white !important;
@@ -73,8 +66,11 @@ a {
 
 .cta-btn {
   color: aliceblue;
+  font-size: 0.8rem;
   background-color: #111;
   width: 100px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 /* carousel */
@@ -117,11 +113,14 @@ a {
 }
 
 .products-sub-nav {
+  margin-top: 5px;
   display: flex;
   justify-content: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-weight: 800;
   letter-spacing: 5px;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
 }
 
 .product-dropdown{
@@ -144,6 +143,11 @@ a {
   letter-spacing: 2px;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight:800
+}
+
+.card-body {
+  background-color: #f0f8ff;
+  border-top: 1px #111 solid;
 }
 
 .btt-btn {
