@@ -8,14 +8,9 @@ class AddressesAdmin(admin.ModelAdmin):
     list_display = (
         'label',
         'email',
+        'tel',
     )
     ordering = ('label',)
-
-
-class NoticeAdmin(admin.ModelAdmin):
-    list_display = (
-        'notice',
-    )
 
 
 admin.site.register(ContactDetails, AddressesAdmin)
