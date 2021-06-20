@@ -1,35 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/blog.css' %}">
-{% endblock %}
-
 {% block content %}
-<header class="masthead">
-  <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <div class=" col-md-8 col-md-10 mx-auto">
-        <div class="site-heading">
-          <h3 class=" site-heading my-4 mt-3 text-black"> Welcome </h3>
-          <p class="text-dark">Blog </p>
+      <div class=" col-12 text-center">
+        <div class="blog-header mt-2 mb-4">
+          <h2> ARTIZAN BLOG & NEWS</h2>
         </div>
       </div>
     </div>
   </div>
-</header>
 <div class="container">
   <div class="row">
-    <!-- Blog Entries Column -->
-    <div class="col-md-8 mt-3 left">
+    <div class="col-12 blog-main text-center">
       {% for post in post_list %}
-      <div class="card mb-4">
-        <div class="card-body">
-          <h2 class="card-title">{{ post.title }}</h2>
-          <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-          <p class="card-text">{{post.content|slice:":200"}}</p>
-          <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+      <div class="card blog-card my-3">
+        <div class="card-body border">
+          <h2 class="card-title blog-card-title">{{ post.title }}</h2>
+          <p class="card-text blog-card-subtext text-muted">{{ post.author }} | {{ post.created_on}} </p>
+          <p class="card-text blog-card-text">{{post.content|slice:":200"}}...</p>
+          <a href="{% url 'post_detail' post.slug  %}" class="btn cta-btn ">Read More &rarr;</a>
         </div>
       </div>
       {% endfor %}

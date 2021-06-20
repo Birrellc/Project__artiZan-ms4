@@ -26,12 +26,16 @@ a {
 }
 
 .banner {
-  background-color: #111;
+  background: #3B3534;
   color: aliceblue;
 }
 
 .delivery-header {
   margin: auto;
+}
+
+.card {
+  border: none !important;
 }
 
 /* Nav */
@@ -76,7 +80,7 @@ a {
   color: aliceblue;
   font-size: 0.8rem;
   background-color: #111;
-  width: 100px;
+  min-width: 100px;
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -153,8 +157,12 @@ a {
   font-weight: 800
 }
 
+.product-card {
+  border: 1px #111 solid !important;
+}
+
 .card-body {
-  background-color: #f0f8ff;
+  background-color: #f0f3f5;
   border-top: 1px #111 solid;
 }
 
@@ -227,15 +235,52 @@ a {
   border-radius: 0;
 }
 
+/* Product Details */
+
+.product-name {
+  font-size: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Blog */
+
+.blog-header h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800 !important;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.blog-main {
+  margin: auto;
+  width: 100%;
+}
+
+.blog-card-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.blog-card-subtext {
+  margin: auto;
+  border-bottom: 1px solid #111;
+  width: 50%;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
 /* Footer */
 
 .footer {
-  margin-top: 70px;
+  margin-top: 120px;
   background: #3b3534;
   color: #fbfbf8;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   width: 100%;
-  padding: 1rem 10%;
+  padding: 20px;
 }
 
 .footer h3 {
@@ -264,5 +309,9 @@ a {
 @media screen and (min-width: 768px) {
   .about-container {
     padding-right: 80px;
+  }
+
+  .post-detail-card {
+    margin-bottom: 170px;
   }
 }
