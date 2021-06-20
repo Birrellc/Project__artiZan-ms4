@@ -113,13 +113,13 @@
         </li>
         <li class=" list-inline-item text-center">
             <a href="{% url 'home' %}" class="nav-link d-block d-lg-none">
-                <h2 class="logo-font text-black my-0">ArtiZan</h2>
+                <h2 class="main-header-mobile my-0">ArtiZan</h2>
             </a>
         </li>
         <li class="list-inline-item">
             <a class="nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
                 <div class="text-center">
-                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                    <div><i class="fas fa-shopping-cart"></i></div>
                     <p class="my-0">
                         {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
