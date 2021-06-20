@@ -5,7 +5,7 @@
     <div class="container-fluid gallery-title">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="store-heading mb-4 mt-2">Store</h2>
+                <h2 class="store-header mb-4 mt-2">Store</h2>
                 {% for c in current_categories %}
                     <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge">{{ c.friendly_name }}</span>

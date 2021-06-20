@@ -1,114 +1,188 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 basket-header text-center">
+            <h2 class="mt-2 mb-4">Shopping Basket</h2>
+            <hr />
+        </div>
+    </div>
+</div>
 
-{% block content %}
-    <div class="container mb-2 details-container">
+<!-- DESKTOP VIEW -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {% if basket_items %}
+            <div class="table-responsive d-md-block d-none">
+                <table class="table table-sm table-borderless">
+                    <thead class="basket-table-text">
+                        <tr>
+                            <th scope="col">Print</th>
+                            <th scope="col">Title/Sku</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+                    {% for item in basket_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% if item.product.image %}
+                            <img class="img-fluid rounded-0 border" src="{{ item.product.image.url }}"
+                                alt="{{ item.product.name }}" />
+                            {% else %}
+                            <img class="img-fluid rounded-0 border" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ item.product.name }}" />
+                            {% endif %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">
+                                SKU: {{ item.product.sku|upper }}
+                            </p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">
+                                <i class="fas fa-times-circle"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h6>
+                                <strong>Basket Total: ${{ total|floatformat:2 }}</strong>
+                            </h6>
+                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4">
+                                <strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong>
+                            </h4>
+                            {% if free_delivery_delta > 0 %}
+                            <p class="mb-1 text-danger">
+                                You could get free delivery by spending just
+                                <strong>${{ free_delivery_delta }}</strong> more!
+                            </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'products' %}" class="btn cta-btn rounded-0">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="btn cta-btn rounded-0">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">Your basket is empty.</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!--MOBILE VIEW-->
+<div class="container d-block d-md-none no-gutters">
+    <div class="row">
+        {% for item in basket_items %}
+        <div class="col-12 mb-2">
+            {% if item.product.image %}
+            <img class="img-fluid rounded-0 border" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
+            {% else %}
+            <img class="img-fluid rounded-0 border" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" />
+            {% endif %}
+        </div>
         <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Shopping Basket</h2>
-                <hr>
+            <div class="col-4 mb-5">
+                <p class="my-0"><strong>Title:</strong></p>
+                <p class="my-0"><strong>Sku:</strong></p>
+                <p class="my-0"><strong>Price:</strong></p>
+                <p class="my-0"><strong>Qty:</strong></p>
+                <p class="my-0"><strong>Delete:</strong></p>
+            </div>
+            <div class="col-8 text-center mb-5">
+                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                <p class="my-0">${{ item.product.price }}</p>
+                <p class="my-0">{{ item.quantity }}</p>
+                <a class="remove-item text-danger" id="remove_{{ item.item_id }}">
+                    <i class="fas fa-times-circle"></i>
+                </a>
             </div>
         </div>
-
+        <hr>
+        {% endfor %}
         <div class="row">
-            <div class="col">
-                {% if basket_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Remove</th>
-                                </tr>
-                            </thead>
-
-                            {% for item in basket_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        {% if item.product.image %}
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                                        {% else %}
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                                        {% endif %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <a class="remove-item text-danger float-right"
-                                            id="remove_{{ item.item_id }}">
-                                            <i class="fas fa-times-circle"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Basket Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
+            <div class="col-12 pt-5">
+                <h6>
+                    <strong>Basket Total: ${{ total|floatformat:2 }}</strong>
+                </h6>
+                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                <h4 class="mt-4">
+                    <strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong>
+                </h4>
+                {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-danger">
+                    You could get free delivery by spending just
+                    <strong>${{ free_delivery_delta }}</strong> more!
+                </p>
                 {% endif %}
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 basket-btn">
+                <a href="{% url 'products' %}" class="btn cta-btn rounded-0 mt-2">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+                <a href="{% url 'checkout' %}" class="btn cta-btn rounded-0 mt-2">
+                    <span class="text-uppercase">Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
     </div>
+</div>
 
-    <script type="text/javascript">
-
-        // Remove item and reload on click
-        $('.remove-item').click(function(e) {
+<script type="text/javascript">
+    // Remove item and reload on click
+    $(".remove-item").click(function (e) {
         let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id').split('remove_')[1];
+        let itemId = $(this).attr("id").split("remove_")[1];
         let url = `/basket/remove/${itemId}/`;
-        let data = {'csrfmiddlewaretoken': csrfToken};
+        let data = {
+            csrfmiddlewaretoken: csrfToken,
+        };
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
-    </script>
+        $.post(url, data).done(function () {
+            location.reload();
+        });
+    });
+</script>
 {% endblock %}
