@@ -3,26 +3,41 @@
 
 {% block content %}
 <div class="container">
-    <div class="">
-        <h3 class="">Contact</h3>
-        <div class="row">
-            <div class="">
-                {% for contact in contacts %}
-                    <div>
-                    {% if contact.tel == null %}
-                        <p class="small"><span class="bold">{{ contact.label }}: </span>{{ contact.email }}</p>
-                    </div>
-                    <div>
-                    {% else %}
-                    <p class="small"><span class="bold">{{ contact.label }}: </span>{{ contact.tel }}</p>
-                    {% endif %}
-                    </div>
-                {% endfor %}
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="contact-header mt-2 mb-4">
+                <h2>Contact</h2>
             </div>
         </div>
     </div>
 </div>
-    
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="contact-main">
+                <div class="card contact-card">
+                    <div class="card-body border">
+                        {% for contact in contacts %}
+                        <div class="text-center border text-uppercase">
+                            {% if contact.tel == null %}
+                            <p class="contact-text"><span class="strong">{{ contact.label }}: </span>{{ contact.email }}</p>
+                            {% else %}
+                            <p class="contact-text"><span class="strong">{{ contact.label }}: </span>{{ contact.tel }}</p>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <img class="img-fluid border" src="{{ MEDIA_URL }}contact-img.jpg" alt="Contact Image">
+        </div>
+    </div>
+</div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}

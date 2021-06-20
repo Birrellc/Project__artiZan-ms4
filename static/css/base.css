@@ -22,7 +22,7 @@ a {
 }
 
 .border {
-  border: 1px solid #111 !important;
+  border: 2px solid #111 !important;
 }
 
 .banner {
@@ -96,10 +96,6 @@ a {
   width: 75%;
 }
 
-.img-border {
-  border: 2px black solid;
-}
-
 .home-img {
   display: flex;
   align-content: center;
@@ -158,12 +154,12 @@ a {
 }
 
 .product-card {
-  border: 1px #111 solid !important;
+  border: 2px #111 solid !important;
 }
 
 .card-body {
   background-color: #f0f3f5;
-  border-top: 1px #111 solid;
+  border-top: 2px #111 solid;
 }
 
 .btt-btn {
@@ -272,6 +268,31 @@ a {
   margin-bottom: 15px;
   text-transform: capitalize;
 }
+
+/* Contact */
+
+.contact-header h2{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800 !important;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.contact-text {
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.contact-main {
+  margin: auto;
+  padding-bottom: 30px;
+}
+
 /* Footer */
 
 .footer {
