@@ -20,7 +20,7 @@
           <h2 class="card-title blog-card-title">{{ post.title }}</h2>
           <p class="card-text blog-card-subtext text-muted">{{ post.author }} | {{ post.created_on}} </p>
           <p class="card-text blog-card-text">{{post.content|slice:":200"}}...</p>
-          <a href="{% url 'post_detail' post.slug  %}" class="btn cta-btn ">Read More &rarr;</a>
+          <a href="{% url 'post_detail' post.slug  %}" class="btn cta-btn text-uppercase">Read More &rarr;</a>
         </div>
       </div>
       {% endfor %}
