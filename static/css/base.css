@@ -201,6 +201,32 @@ hr {
   cursor: pointer !important;
 }
 
+/* Checkout */
+
+.checkout-header h2{
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.checkout-subheader {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.checkout-success-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 /* Toasts */
 
 .message-container {
