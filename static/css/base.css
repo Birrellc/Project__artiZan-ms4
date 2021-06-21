@@ -100,7 +100,7 @@ hr {
 }
 
 .cta-btn {
-  color: aliceblue;
+  color: aliceblue !important;
   font-size: 0.8rem;
   background-color: #111;
   min-width: 100px;
@@ -241,6 +241,12 @@ hr {
 
 /* Toasts */
 
+.toast-btn {
+  font-size: 0.7rem;
+  background-color: #111;
+  color: #fff;
+}
+
 .message-container {
   position: fixed;
   top: 72px;
@@ -262,6 +268,12 @@ hr {
   overflow-y: auto;
 }
 
+.toast-text {
+  color:#111 !important;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
 /* Product Form */
 
 .btn-file {
@@ -427,6 +439,12 @@ hr {
 }
 
 /* media queries */
+
+@media screen and (max-width: 321px) {
+  .toast {
+    width: 100%;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .about-container {
