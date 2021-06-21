@@ -120,7 +120,7 @@
             <a class="nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
                 <div class="text-center">
                     <div><i class="fas fa-shopping-cart"></i></div>
-                    <p class="my-0">
+                    <p class="my-0 small">
                         {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                         {% else %}
