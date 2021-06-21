@@ -189,7 +189,7 @@ hr {
 
 /* Basket */
 
-.basket-header h2{
+.basket-header h2 {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 5px;
@@ -203,7 +203,7 @@ hr {
 
 /* Checkout */
 
-.checkout-header h2{
+.checkout-header h2 {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 5px;
@@ -318,7 +318,7 @@ hr {
 
 /* Contact */
 
-.contact-header h2{
+.contact-header h2 {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 800 !important;
   font-size: 2rem;
@@ -370,6 +370,20 @@ hr {
 
 .footer a:hover {
   color: #ffc717;
+}
+
+/* All Auth */
+
+.allauth-container{
+  margin-bottom: 200px;
+}
+
+.auth-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* media queries */
