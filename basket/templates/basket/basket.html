@@ -91,16 +91,29 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your basket is empty.</p>
-            <a href="{% url 'products' %}" class="btn cta-btn rounded-0">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-            {% endif %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mt-4 mb-5">Your basket is empty.</p>
+                        <a href="{% url 'products' %}" class="btn cta-btn rounded-0">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img class="img-fluid border mt-5 mb-3" src="{{ MEDIA_URL }}basket-img.jpg"
+                            alt="Basket Page Image">
+                    </div>
+                </div>
+            </div>
         </div>
+        {% endif %}
     </div>
+</div>
 </div>
 
 <!--MOBILE VIEW-->
@@ -133,7 +146,6 @@
             </div>
         </div>
         <hr>
-        {% endfor %}
         <div class="row">
             <div class="col-12 pt-5">
                 <h6>
@@ -167,6 +179,7 @@
                 </a>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 
