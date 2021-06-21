@@ -69,11 +69,13 @@
                                         </a>
                                     </p>
                                     {% endif %}
-                                    <div>
-                                        <div class="col-12 mb-2">
-                                            <a href="{% url 'product_detail' product.id %}" class="btn cta-btn text-uppercase">View</a>
-                                          </div>    
+                                    {% if product.sold != True %}
+                                    <div class="col-12 mb-2">
+                                        <a href="{% url 'product_detail' product.id %}" class="btn cta-btn text-uppercase">View</a>
                                     </div>
+                                    {% else %}
+                                    <p class="sold-text mt-2 text-uppercase">Sold!</p>
+                                    {% endif %}
                                     {% if request.user.is_superuser %}
                                                 <small class="ml-5">
                                                     <a class="text-success" href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i></a> | 
