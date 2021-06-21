@@ -22,6 +22,8 @@
                 <div class="details-container my-5 py-3 text-center">
                     <p class="product-name">{{ product.name }}</p>
                     <p class="lead">${{ product.price }}</p>
+                    <p class="small">{{ product.height }}mm (H)</p>
+                    <p class="small">{{ product.width }}mm (W)</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -30,10 +32,12 @@
                     </p>
                     {% endif %}
                     {% if request.user.is_superuser %}
+                    <p class="mt-3">
                         <small class="ml-3">
-                            <a href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i></a> | 
+                            <a class="text-success" href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i></a> | 
                             <a class="text-danger" href="{% url 'delete_product' product.id %}"><i class="fas fa-trash-alt"></i></a>
                         </small>
+                    </p>
                     {% endif %}
                     <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
                         {% csrf_token %}
@@ -41,10 +45,9 @@
                             {% if product.sold != True %}
                             <div class="col-12">
                                 <p class="mt-2"><strong>Quantity:</strong></p>
-                                <p class="text-muted">Max: 5 (to prevent accidental orders)</p>
                                 <div class="form-group offset-3 w-50">
                                     <div class="input-group quanitity-box">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="5" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="1" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     </div>
                                 </div>
                             </div>
