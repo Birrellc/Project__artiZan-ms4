@@ -1,1 +1,1 @@
-web: gunicorn artizan.wsgi.application
+web: gunicorn artizan.wsgi:application
