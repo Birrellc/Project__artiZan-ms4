@@ -27,7 +27,7 @@
                         <p class="my-0">Menu</p>
                     </div>
                 </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                <div class="dropdown-menu border" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <a><h6 class="dropdown-header">Admin</h6></a>
@@ -91,7 +91,7 @@
                     <p class="my-0">Menu</p>
                 </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <a><h6 class="dropdown-header">Admin</h6></a>
