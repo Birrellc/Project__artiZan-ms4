@@ -241,6 +241,25 @@ hr {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+/* Profile */
+
+.profile-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.profile-subheader {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
 /* Toasts */
 
 .toast-btn {
