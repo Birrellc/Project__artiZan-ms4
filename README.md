@@ -4,7 +4,7 @@
 
 ## Description
 
-![PICTURE](https://github.com/Birrellc/artiZan-ms4/tree/master/media/artizan-readme.jpg)
+![PICTURE](https://github.com/Birrellc/artiZan-ms4/tree/master/media/artizan-readme.png)
 
 _this is a fictitious website created for my milestone project 4 with the code institute_.
 
@@ -26,7 +26,7 @@ Due to time constraints from when I started this project till my submission I wa
 
 The initial wireframes for this project [Wireframes](https://github.com/Birrellc/artiZan-ms4/tree/master/docs/wireframes)
 
-*soon after starting this project I could make huge improvements to the initial design plan and immediately decided to change up the process.*
+_soon after starting this project I could make huge improvements to the initial design plan and immediately decided to change up the process._
 
 ---
 
@@ -194,21 +194,31 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 
 ### Landing Page
 
+As an Art themed website once I got started I knew I had to make sure the landing page was aesthetically please so i chose to go with quite a basic color set in order to avoid chaos and keep it very art themed and minimalistic for the user.
+
+The landing page consists of:
+
+Navbar
+Banner
+Search Bar(on Desktop view)
+Carousel of a few prints from the website
+About us section
+Hero image
+
+---
+
+### Store
+
 
 
 ---
 
+### Blog
 
 
 ---
 
-
-
----
-
-
-
----
+### Contact
 
 
 
