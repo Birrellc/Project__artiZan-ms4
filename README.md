@@ -4,11 +4,15 @@
 
 ## Description
 
-![PICTURE]() - responsively img placeholder
+![PICTURE](https://github.com/Birrellc/artiZan-ms4/tree/master/media/artizan-readme.jpg)
 
 _this is a fictitious website created for my milestone project 4 with the code institute_.
 
-An Ecommerce website created with django where there main purpose is for the user to view and purchase art pieces.
+An Ecommerce website created with django where there main purpose is for the user to view/purchase art and also have a sense of community with a blog that website visitors can comment on.
+
+This is my final project in the Code Institute Full Stack Development course of which the main goal is to use Django to create an Ecommerce website with full payment system (stripe) with static and media files hosted on AWS.
+
+Due to time constraints from when I started this project till my submission I was unable to implement some of the features I would have liked but plan to update this project after i have recieved my final grade. (Please see Future Features section to see planned improvements).
 
 ---
 
@@ -20,7 +24,9 @@ An Ecommerce website created with django where there main purpose is for the use
 
 ### Wireframes
 
-The initial wireframes for this project [Wireframes](https://github.com/Birrellc/artiZan/blob/master/readme-images/)
+The initial wireframes for this project [Wireframes](https://github.com/Birrellc/artiZan-ms4/tree/master/docs/wireframes)
+
+*soon after starting this project I could make huge improvements to the initial design plan and immediately decided to change up the process.*
 
 ---
 
