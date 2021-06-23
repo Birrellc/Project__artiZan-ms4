@@ -30,14 +30,14 @@ Initial DB: [SQLite3](https://www.sqlite.org/index.html)
 Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 
 
-##### Category Model
+##### Category Model (Products Model)
 
 | Field         | Field Type | Field Options                         |
 | --------------| ---------- | ------------------------------------- |
 | name          | CharField  | max_length=254                        |
 | friendly_name | CharField  | max_length=254, null=True, blank=True |
 
-##### Art Model
+##### Art Model (Products Model)
 
 | Field         | Field Type   | Field Options                                                      |
 | --------------| ----------   | ------------------------------------------------------------------ |
@@ -52,7 +52,7 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 | image         | ImageField   | null=True, blank=True                                              |
 | sold          | BooleanField | default=False                                                      |
 
-##### Contact Details Model
+##### Contact Details Model (Contact Model)
 
 | Field         | Field Type | Field Options                         |
 | --------------| ---------- | ------------------------------------- |
@@ -60,7 +60,7 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 | email         | CharField  | max_length=254, blank=True            |
 | tel           | CharField  | max_length=254, null=True, blank=True |
 
-##### Order Model
+##### Order Model (Checkout Model)
 
 | Field                | Field Type    | Field Options                                                                                  |
 | ---------------------| ----------    | -----------------------------------------------------------------------------------------------|
@@ -82,7 +82,7 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 | original_basket      | TextField     | null=False, blank=False, default=''                                                            |
 | stripe_pid           | Charfield     | max_length=254, null=False, blank=False, default=''                                            |
 
-##### OrderLineItem
+##### OrderLineItem (Checkout Model)
 
 | Field                | Field Type    | Field Options                                                                                  |
 | ---------------------| ----------    | -----------------------------------------------------------------------------------------------|
@@ -91,7 +91,7 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 | quantity             | IntegerField  | null=False, blank=False, default=0                                                             |
 | lineitem_total       | DecimalField  | max_digits=6, decimal_places=2, null=False, blank=False, editable=False                        |
 
-##### UserProfile
+##### UserProfile (Profiles Model)
 
 | Field                    | Field Type    | Field Options                                  |
 | -------------------------| ----------    | -----------------------------------------------|
@@ -104,7 +104,32 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 | default_postcode         | CharField     | max_length=20, null=True, blank=True           |
 | default_country          | CountryField  | blank_label='Country', null=True, blank=True   |
 
+##### Post (Blog Model)
 
+| Field                    | Field Type    | Field Options                                              |
+| -------------------------| ----------    | -----------------------------------------------------------|
+| title                    | CharField     | max_length=200, unique=True                                |
+| slug                     | SlugField     | max_length=200, unique=True                                |
+| author                   | ForeignKey    | User, on_delete=models.CASCADE, related_name='blog_posts'  |
+| updated_on               | DateTimeField | auto_now=True                                              |
+| content                  | TextField     |                                                            |
+| created_on               | DateTimeField | auto_now_add=True                                          |
+| status                   | IntegerField  | choices=STATUS, default=0                                  |
+
+
+##### Comment (Blog Model)
+
+| Field                    | Field Type    | Field Options                                           |
+| -------------------------| ----------    | --------------------------------------------------------|
+| post                     | ForeignKey    | Post, on_delete=models.CASCADE, related_name='comments' |
+| name                     | CharField     | max_length=80                                           |
+| email                    | EmailField    | max_length=80, null=True, blank=True                    |
+| body                     | TextField     | max_length=80, null=True, blank=True                    |
+| created_on               | DateTimeField | auto_now_add=True                                       |
+| active                   | BooleanField  | default=False                                           |
+
+
+---
 
 ### User Stories
 
