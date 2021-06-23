@@ -26,6 +26,85 @@ The initial wireframes for this project [Wireframes](https://github.com/Birrellc
 
 ### Database
 
+Initial DB: [SQLite3](https://www.sqlite.org/index.html)
+Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
+
+
+##### Category Model
+
+| Field         | Field Type | Field Options                         |
+| --------------| ---------- | ------------------------------------- |
+| name          | CharField  | max_length=254                        |
+| friendly_name | CharField  | max_length=254, null=True, blank=True |
+
+##### Art Model
+
+| Field         | Field Type   | Field Options                                                      |
+| --------------| ----------   | ------------------------------------------------------------------ |
+| name          | CharField    | max_length=254                                                     |
+| sku           | CharField    | max_length=254                                                     |
+| artist        | CharField    | max_length=254                                                     |
+| price         | DecimalField | max_digits=10, decimal_places=2                                    |
+| category      | ForeignKey   | 'Category', null=True, blank=True, on_delete=models.SET_NULL       |
+| height        | DecimalField | max_digits=10, decimal_places=2                                    |
+| width         | DecimalField | max_digits=10, decimal_places=2                                    |
+| image_path    | URLField     | max_length=254, null=True, blank=True                              |
+| image         | ImageField   | null=True, blank=True                                              |
+| sold          | BooleanField | default=False                                                      |
+
+##### Contact Details Model
+
+| Field         | Field Type | Field Options                         |
+| --------------| ---------- | ------------------------------------- |
+| label         | CharField  | max_length=254                        |
+| email         | CharField  | max_length=254, blank=True            |
+| tel           | CharField  | max_length=254, null=True, blank=True |
+
+##### Order Model
+
+| Field                | Field Type    | Field Options                                                                                  |
+| ---------------------| ----------    | -----------------------------------------------------------------------------------------------|
+| order_number         | CharField     | max_length=32, null=False, editable=False                                                      |
+| user_profile         | ForeignKey    | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders            |
+| full_name            | CharField     | max_length=50, null=False, blank=False                                                         |
+| email                | EmailField    | max_length=254, null=False, blank=False                                                        |
+| phone_number         | CharField     | max_length=20, null=False, blank=False                                                         |
+| country              | CountryField  | blank_label='Country \*', null=False, blank=False                                              |
+| postcode             | CharField     | max_length=20, null=True, blank=True                                                           |
+| town_or_city         | CharField     | max_length=40, null=False, blank=Falsee                                                        |
+| street_address1      | Charfield     | max_length=80, null=False, blank=False                                                         |
+| street_address2      | Charfield     | max_length=80, null=True, blank=True                                                           |
+| county               | Charfield     | max_length=80, null=True, blank=True                                                           |
+| date                 | DateTimeField | auto_now_add=True                                                                              |
+| delivery_cost        | DecimalField  | max_digits=6, decimal_places=2, null=False, default=0                                          |
+| order_total          | DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                                         |
+| grand_total          | DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                                         |
+| original_basket      | TextField     | null=False, blank=False, default=''                                                            |
+| stripe_pid           | Charfield     | max_length=254, null=False, blank=False, default=''                                            |
+
+##### OrderLineItem
+
+| Field                | Field Type    | Field Options                                                                                  |
+| ---------------------| ----------    | -----------------------------------------------------------------------------------------------|
+| order                | ForeignKey    | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'             |
+| product              | ForeignKey    | Art, null=False, blank=False, on_delete=models.CASCADE                                         |
+| quantity             | IntegerField  | null=False, blank=False, default=0                                                             |
+| lineitem_total       | DecimalField  | max_digits=6, decimal_places=2, null=False, blank=False, editable=False                        |
+
+##### UserProfile
+
+| Field                    | Field Type    | Field Options                                  |
+| -------------------------| ----------    | -----------------------------------------------|
+| user                     | OnetoOneField | User, on_delete=models.CASCADE                 |
+| default_phone_number     | CharField     | max_length=20, null=True, blank=True           |
+| default_street_address1  | CharField     | max_length=80, null=True, blank=True           |
+| default_street_address2  | CharField     | max_length=80, null=True, blank=True           |
+| default_town_or_city     | CharField     | max_length=40, null=True, blank=True           |
+| default_county           | CharField     | max_length=80, null=True, blank=True           |
+| default_postcode         | CharField     | max_length=20, null=True, blank=True           |
+| default_country          | CountryField  | blank_label='Country', null=True, blank=True   |
+
+
 
 ### User Stories
 
