@@ -375,6 +375,7 @@ hr {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2.5px;
+  border-bottom: 1px solid #111;
 }
 
 .blog-card-subtext {
@@ -385,6 +386,9 @@ hr {
   text-transform: capitalize;
 }
 
+.blog-comment {
+  overflow-wrap: break-word;
+}
 /* Contact */
 
 .contact-header h2 {
