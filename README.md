@@ -252,6 +252,8 @@ Contact Details (displayed in card)
 Image
 Social Footer
 
+---
+
 ### Profile
 
 The User Profile page consists of 2 elements, we have a form which users can fill in their delivery information and update to make checkouts easier and faster and also the users order history is displayed in order for the user to interact with.
@@ -264,6 +266,8 @@ Delivery Information Form
 Order History
 Social Footer
 
+---
+
 ### Basket/Checkout
 
 The Basket & Checkout pages are both quite similar showing the product information that the user is purchasing plus the calculated total cost and delivery for the products.
@@ -274,6 +278,8 @@ Banner
 Delivery Information Form & payment (checkout)
 Order
 Social Footer
+
+---
 
 ### Product Management (Add Product / Edit Product)
 
