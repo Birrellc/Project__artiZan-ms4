@@ -4,7 +4,7 @@
 
 ## Description
 
-![PICTURE](/media/artizan-readme.png)
+![PICTURE](/media/readme-images/artizan-readme.png)
 
 _this is a fictitious website created for my milestone project 4 with the code institute_.
 
@@ -198,13 +198,13 @@ As an Art themed website once I got started I knew I had to make sure the landin
 
 The landing page consists of:
 
-Navbar
-Banner
-Search Bar(on Desktop view)
-Carousel of a few prints from the website
-About us section
-Hero image
-Social Footer
+- Navbar
+- Banner
+- Search Bar(on Desktop view)
+- Carousel of a few prints from the website
+- About us section
+- Hero image
+- Social Footer
 
 ---
 
@@ -214,15 +214,15 @@ For my store page I browsed various online retailers in multiple sectors and als
 
 The Store page consists of:
 
-Navbar
-Banner
-Products (in card form)
-Sort filter
-Categories filter
-Small button to return to the top of the page
-Update & Delete products buttons for admin
-Ability to mark products as sold (this is for a later date when I manage to implement a stocking system)
-Social Footer
+- Navbar
+- Banner
+- Products (in card form)
+- Sort filter
+- Categories filter
+- Small button to return to the top of the page
+- Update & Delete products buttons for admin
+- Ability to mark products as sold (this is for a later date when I manage to implement a stocking system)
+- Social Footer
 
 ---
 
@@ -232,11 +232,11 @@ The Blog page like the rest of the website is of simple format to be quick and e
 
 The Blog page consists of:
 
-Navbar
-Banner
-Blog Posts (in card form)
-Comments section (when posts have been expanded)
-Social Footer
+- Navbar
+- Banner
+- Blog Posts (in card form)
+- Comments section (when posts have been expanded)
+- Social Footer
 
 ---
 
@@ -246,11 +246,11 @@ The Contact page is very basic as all it contains is an image and a table contai
 
 The Contact page consists of:
 
-Navbar
-Banner
-Contact Details (displayed in card)
-Image
-Social Footer
+- Navbar
+- Banner
+- Contact Details (displayed in card)
+- Image
+- Social Footer
 
 ---
 
@@ -260,11 +260,11 @@ The User Profile page consists of 2 elements, we have a form which users can fil
 
 The Profile page consists of:
 
-Navbar
-Banner
-Delivery Information Form
-Order History
-Social Footer
+- Navbar
+- Banner
+- Delivery Information Form
+- Order History
+- Social Footer
 
 ---
 
@@ -273,11 +273,11 @@ Social Footer
 The Basket & Checkout pages are both quite similar showing the product information that the user is purchasing plus the calculated total cost and delivery for the products.
 The checkout page also has a form for delivery information and payment but still displays the users order.
 
-Navbar
-Banner
-Delivery Information Form & payment (checkout)
-Order
-Social Footer
+- Navbar
+- Banner
+- Delivery Information Form & payment (checkout)
+- Order
+- Social Footer
 
 ---
 
@@ -285,10 +285,10 @@ Social Footer
 
 The Product Management page takes the admin to the add product page but also this page shares the same design as the edit product page which is simply just a form where the admin can add products or edit them.
 
-Navbar
-Banner
-Product Form
-Social Footer
+- Navbar
+- Banner
+- Product Form
+- Social Footer
 
 ---
 
