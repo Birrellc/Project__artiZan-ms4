@@ -4,7 +4,7 @@
 
 ## Description
 
-![PICTURE](https://github.com/Birrellc/artiZan-ms4/tree/master/media/artizan-readme.png)
+![PICTURE](/media/artizan-readme.png)
 
 _this is a fictitious website created for my milestone project 4 with the code institute_.
 
@@ -204,47 +204,161 @@ Search Bar(on Desktop view)
 Carousel of a few prints from the website
 About us section
 Hero image
+Social Footer
 
 ---
 
 ### Store
 
+For my store page I browsed various online retailers in multiple sectors and also using the code institute course material i decided to go with a simple product placement in rows of 4 and limited detail below each product so users wouldn't be distracted and also so they could browse products easily. The products are displayed in a card format with a color and border to help them stand out from the white background.
 
+The Store page consists of:
+
+Navbar
+Banner
+Products (in card form)
+Sort filter
+Categories filter
+Small button to return to the top of the page
+Update & Delete products buttons for admin
+Ability to mark products as sold (this is for a later date when I manage to implement a stocking system)
+Social Footer
 
 ---
 
 ### Blog
 
+The Blog page like the rest of the website is of simple format to be quick and easy for the user to view and understand the premis. The plog posts are created in django admin where they can be marked and draft while waiting for review by the owner or immediately published. In the future I would like to add a form for specific users to create the Blog posts on page without having to go into the admin panel. Users can also click on the view button below the blog post to be view the full post and on that page they can also leave comments which have to be approved by the admin on the admin panel in the comments section to prevent unwanted posts. In future I would like to link this feature to user accounts
+
+The Blog page consists of:
+
+Navbar
+Banner
+Blog Posts (in card form)
+Comments section (when posts have been expanded)
+Social Footer
 
 ---
 
 ### Contact
 
+The Contact page is very basic as all it contains is an image and a table containing some contact numbers and email addresses as I wanted to experiment with using a model to just display information added from the admin panel (This practice here made it possible for me to understand the concepts needed to setup my blog app with the help of the tutorials i used for that app also)
 
+The Contact page consists of:
+
+Navbar
+Banner
+Contact Details (displayed in card)
+Image
+Social Footer
+
+### Profile
+
+The User Profile page consists of 2 elements, we have a form which users can fill in their delivery information and update to make checkouts easier and faster and also the users order history is displayed in order for the user to interact with.
+
+The Profile page consists of:
+
+Navbar
+Banner
+Delivery Information Form
+Order History
+Social Footer
+
+### Basket/Checkout
+
+The Basket & Checkout pages are both quite similar showing the product information that the user is purchasing plus the calculated total cost and delivery for the products.
+The checkout page also has a form for delivery information and payment but still displays the users order.
+
+Navbar
+Banner
+Delivery Information Form & payment (checkout)
+Order
+Social Footer
+
+### Product Management (Add Product / Edit Product)
+
+The Product Management page takes the admin to the add product page but also this page shares the same design as the edit product page which is simply just a form where the admin can add products or edit them.
+
+Navbar
+Banner
+Product Form
+Social Footer
 
 ---
 
 ### Strategy Plane
 
+Strategy Plane
+The purpose of the website created is to create an easy to use Ecommerce store with an Art prints theme where users can come to the platform and easily find products and make purchases.
 
+Also I find that Art is a hobbiest community so I decided that the website should have a blog feature which visitors can interact with to build a community around the project which I see as a key point for customer retention.
+
+- Design an easy to use Ecommerce Store.
+- Focused on Art Prints & Blog
+- Mobile Responsive
+- Login System
 
 ---
 
 ### Scope
 
+#### Goals
 
+- The website will provide a clean UX / UI for users to use effectively.
+- The website will have full login functionality for users to create accounts to make purchases but also be able to without an account.
+- The website will provide users the ability to interact with the store to make purchases.
+- the website will provide users the ability to interact with the blog to build community.
+- The website will be an easy to use website focused on simplicity rather than more complicated design.
+- All forms that require the input of user data must be validated for efficiency and professionalism.
+- Allow Admin to Create, Read, Update and Delete submitted content (CRUD).
+
+#### Features
+
+- Responsive website
+- Login system
+- Easy to use navigation
+- About section for basic company info
+- Profile page
+- Shopping basket
+- Checkout page
+- Payment system
+- Product search (desktop view)
+- Product page
+- Product details
+- Blog
+- Blog comments section
+- Contact page
+- Social footer
+- Product Management
+
+#### Future Features
+
+- Stock and quantity system
+- User accounts linked to blog comments
+- Allow users to upload their own art.
+- Subscription model
+- Review system
+- User specific blogs
+- Social Login
 
 ---
 
 ### Structure
 
+- The Website is laid out in a simple and easy to use manner to provide ease of use to any site visitors.
+- Toast messages are displayed sidewide on interaction to help guide and confirm for users.
 
+- Please see sections above for specific page struction
 
 ---
 
 ### Skeleton
 
-
+Minimal Theme Navigation.
+Pages - There will be a Home, Store page, Product detail page, Basket page, Checkout page, Login/Signup page, Profile page, Blog page, Post detail page (blog posts) and a Contact Page.
+Admin - Admins will be able to access the admin panel to do CRUD based tasks on nearly everything on the website (ie. products, blog posts, contact links)
+Users - Will have a specific profile page where they can see their previous orders, also update their delivery details on top of that users can purchase products, comment on blog posts(no login required).
+Visitors(non logged in users) - Will still be able to make purchases and interact with the comment section on blog posts and have full site navigation other than profile page.
 
 ---
 
