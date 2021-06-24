@@ -410,21 +410,25 @@ The images used in this project came from [Pexels](https://www.pexels.com) & [Pi
 ### Frameworks
 
 - [jQuery](https://jquery.com/)
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
 
-### Workspace
+### Tools
 
 - [VSCode](https://code.visualstudio.com/)
 - [Gitpod](https://www.gitpod.io/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
+- [AWS](https://aws.amazon.com/s3/)
+- [Heroku App](https://www.heroku.com/)
 
 ### External Resources
 
 - [Google Fonts](https://fonts.google.com/) - Used to import fonts for the website.
 - [W3C HTML Validator](https://validator.w3.org/) - Used to test/validate HTML code on the website.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test/validate the CSS code on the website.
+- [Pixabay](https://pixabay.com)
 - [Pexels](https://https://www.pexels.com/) - Stock image resource.
 - [Tinypng](http://https://tinypng.com/) - Website used to compress my images to allow for faster loading times.
 - [Font Awesome](https://fontawesome.com/) - Used to provide small icons for the website. eg. Testimonial quotes section.
@@ -433,24 +437,19 @@ The images used in this project came from [Pexels](https://www.pexels.com) & [Pi
 - [Real Favicon Generator](https://realfavicongenerator.net/) - Used to create my favicon image and also test to see if it was working.
 - [Spell Checker for Chrome](https://chrome.google.com/webstore/detail/spell-checker-for-chrome/jfpdnkkdgghlpdgldicfgnnnkhdfhocg?hl=en) - Used to spell check my **README.md** & **testing.md**.
 - [W3 Schools](https://www.w3schools.com/) - Used as a general resource to help with coding.
-- [Am I Responsive](http://ami.responsivedesign.is/) - Used to create mockup of responsive website for **README.md**.
 - [Youtube](https://www.w3schools.com/) - Used as a general resource for help with code.
 - [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes.
 - [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) - Used to create my **README.md** & **Testing.md** files.
-- [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) - Used throughout the website for help with all Flask Framework issues.
-- [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) - Used to help setup my forms for the website.
+- [Django Documentation](https://docs.djangoproject.com/en/3.2/) - Used throughout the website for help with all Flask Framework issues.
+- [Udemy](https://www.udemy.com/)
 - [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
 - Code institute Slack Community - Used for inspiration for my website.
-
-### Dependencies
-
-
 
 ---
 
 ## Testing
 
-Testing has is logged in its own document [HERE]() - testing placeholder
+Testing has is logged in its own document [HERE]()
 
 ---
 
@@ -466,46 +465,163 @@ Testing has is logged in its own document [HERE]() - testing placeholder
 
 ## Deployment
 
+### Local Deployment ###
 
+To deploy this project locally please take the following steps:
 
-### Prerequisites
+1. From the applications [repository](https://github.com/neringabickmore/art-ial.git), click the **CODE** button and download the zip file.
 
+    Alternatively, you can clone the repository using the following line in your terminal:
 
+```
+git clone https://github.com/Birrellc/artiZan-ms4.git
+```
 
-### Cloning from GitHub
+2. When you have the project open in your IDE or the folder open in your terminal use the command below to install the required files:
 
-- Head over to the repository location here(insert link later)
-- Click the 'code' button and download the zip file from the repository or alternatively you can clone the repository by using the following url in your terminal with the commands:
+```
+pip3 install -r requirements.txt
+```
 
-``` git clone "project link" ```
+3. Create a **.env** file to hold your environmental variables such as secret key in the artizan folder for this application:
 
-### IDE
+```
+STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY
+STRIPE_WH_SECRET
+EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD
+DEFAULT_FROM_EMAIL
+AWS_SECRET_ACCESS_KEY
+AWS_S3_CUSTOM_DOMAIN
+AWS_ACCESS_KEY_ID
+SECRET_KEY
+USE_AWS
+AWS_STORAGE_BUCKET_NAME
 
-- Open the application in your IDE.
-- In your IDE terminal with the Application folder open type
-``` python -m pip -r requirements.txt ```
-- This will install the required modules for the application
+```
 
+Please make sure to add **.env** file to **gitignore** before committing.
 
+4. In the IDE terminal, migrate the models to create the database using the following commands:
 
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
-### Heroku
+5. Create a superuser to access the admin panel using the command below:
 
-- First ensure a "Procfile" is created and your requirements.txt is up to date, do this by using the following commands:
-``` pip3 freeze --local > requirements.txt ```
-``` echo web: python app.py > Procfile ```
-- Next login to your Heroku account and create a new app.
-- Make sure you have a GitHub Repository for this project.
-- You can then add Heroku to your GitHub Repository by heading to your settings then pasting the URL in your terminal for example:
+```
+python3 manage.py createsuperuser
+```
 
-``` git remote add heroku https://git.heroku.com/your-heroku-git-url-here ```
+6. After logging in to the admin panel you can start to manually add products but for this project I have a fixture file I created with the data used which can be installed with the command below in your terminal:
 
-- You can then push to heroku with the following command in your terminal:
+```
+python3 manage.py loaddata <fixture_name>
+```
 
-``` git push heroku master ```
+7. After this to make sure everything has setup correctly please start up the application by typing the command **python manage.py runserver** in your terminal. The application is now available in your browser localhost address.
 
-- Once you are ready to prepare the application for deployment and launch use the command:
+---
 
+### Deployment to Heroku ###
+
+To deploy the app using Heroku & AWS(for static and media storage), please take the following steps:
+
+1. Install all the required files by typing the command below into your terminal:
+
+```
+pip3 install -r requirements.txt
+```
+
+2. Login to Heroku and create a new app.
+3. In Heroku dashboard of the new app, click **deploy**, then **deployment** method and select **GitHub** to connect your app to your github repository for automatic deployment everytime you push to GitHub.
+4. In Heroku Resources tab, navigate to **Add-Ons** section and search for **Heroku Postgres**. choose the free tier
+5. In settings tab, navigate to **Reveal Config Vars** and add the following variables:
+
+| **KEY**               | **VALUE**                          |
+| --------------------- | -----------------------------------|
+| AWS_ACCESS_KEY_ID     | ACCESS_KEY_ID_PROVIDED_BY_AWS      |
+| AWS_SECRET_ACCESS_KEY | SECRET_ACCESS_KEY_PROVIDED_BY_AWS  |
+| AWS_STORAGE_BUCKET    | STORAGE_BUCKET_PROVIDED_BY_AWS     |
+| DATABASE_URL          | YOUR_DATABASE_URL                  |
+| EMAIL_HOST_PASS       | YOUR_EMAIL_PASSWORD                |
+| EMAIL_HOST_USER       | YOUR_EMAIL_USER                    |
+| SECRET_KEY            | YOUR_DJANGO_SECRET_KEY             |
+| STRIPE_PUBLIC_KEY     | YOUR_STRIPE_SECRET_KEY             |
+| STRIPE_SECRET_KEY     | YOUR_STRIPE_PUBLIC_KEY             |
+| STRIPE_WH_SECRET      | YOUR_STRIPE_WH_SECRET              |
+| USE_AWS               | True                               |
+
+6. In settings.py comment out the following section :
+
+```
+DATABASES = {
+        'default': dj_database_url.parse('POSTGRESS URL')
+    }
+```
+
+7. In terminal we will now migrate the models to create the Postgress database using the commands below:
+
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+8. Create a superuser to access the admin panel using the following command:
+
+```
+python3 manage.py createsuperuser
+```
+
+9. After logging in to the admin panel you can start to manually add products but for this project I have a fixture file I created with the data used which can be installed with the command below in your terminal:
+
+```
+python3 manage.py loaddata <fixture_name>
+```
+
+10. Remove the temporary database from settings.py and uncomment the original code, then push the code.
+
+11. Back on the Heroku App website click on **View App**.
+
+### AWS (Media & Static)###
+
+The **static** and **media files** are hosted in the [AWS S3 Bucket](https://aws.amazon.com/). You will need to create an account in AWS and create your S3 bucket. Information about settings up AWS can be found [Amazon S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html).
+
+Brief tutorial:
+
+- Create an AWS account
+- Choose S3 on amazon service
+- Create a bucket (select a region and then add this region to your settings.py file)
+- Enable public access
+- Go To properties and enable static web hosting
+- Go to permissions and paste this code into the CORS section
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+```
+
+- Next setup your policy with the arn code from your bucket
+- Head over to the IAM service and add a new group for your application
+- Set policies to generate all
+- Download the zip file (needed for environ variables)
+- Install Boto3 Django Storages in the terminal if installed from the requirements file
+- Link up all your environmental variables for heroku, application and s3
 
 ---
 
