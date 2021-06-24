@@ -13,7 +13,7 @@ body {
 
 body {
   margin-top: 170px;
-  color: #111;
+  color: #111 !important;
   font-family: 'Cabin', sans-serif;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: black !important;
+  color: #111 !important;
 }
 
 .border {
@@ -50,6 +50,7 @@ hr {
 }
 
 /* Nav */
+
 .searchbar {
   display: flex;
   justify-content: center;
@@ -82,11 +83,6 @@ hr {
   text-transform: uppercase;
 }
 
-.btn {
-  background: grey;
-  color: white !important;
-}
-
 .cta-container {
   padding-top: 50px;
   display: flex;
@@ -95,7 +91,7 @@ hr {
 }
 
 .cta-btn {
-  color: aliceblue !important;
+  color: #f0f3f5 !important;
   font-size: 0.8rem;
   background-color: #111;
   min-width: 100px;
@@ -437,14 +433,6 @@ hr {
   font-size: 1.4rem;
 }
 
-.footer a {
-  color: #fbfbf8;
-}
-
-.footer a:hover {
-  color: #ffc717;
-}
-
 /* All Auth */
 
 .auth-header h2 {
@@ -457,9 +445,7 @@ hr {
 
 .allauth-form-inner-content p {
   margin-top: 1.5rem;
-  /* mt-4 */
   color: #6c757d;
-  /* text-secondary */
 }
 
 .allauth-form-inner-content input {
