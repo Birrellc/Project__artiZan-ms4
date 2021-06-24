@@ -372,35 +372,28 @@ Visitors(non logged in users) - Will still be able to make purchases and interac
 
 #### Color Scheme
 
+- My color scheme came from the random color panels generator on [Coolors](https://coolors.co/) later in the project i was unhappy with the original color scheme and chose to generate another random color scheme.
 
+![Color Scheme](/media/readme-images/color-scheme.png)
 
 #### Font
 
+Main Font is:
+
+![Roboto Font](/media/readme-images/roboto.png)
+
+Secondary Font is:
+
+![Cabin Font](/media/readme-images/cabin.png)
+
+The reason I chose these fonts is I was browsing font pairings on google and found this website where they were the top pairing and I really thought they fitted the project quite well.
+
+[Source](https://www.reliablepsd.com/ultimate-google-font-pairings/)
 
 
 #### Images
 
-
----
-
-## Features
-
-### Website Features
-
-
-
-
-### Features to be Implemented in the Future
-
-
-
----
-
-## Security
-
-### Project Security
-
-
+The images used in this project came from [Pexels](https://www.pexels.com) & [Pixabay](https://pixabay.com)
 
 ---
 
