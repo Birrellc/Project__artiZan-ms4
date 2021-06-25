@@ -1,3 +1,5 @@
+/* Global */
+
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap');
 
 * {
@@ -28,12 +30,16 @@ a {
   color: #111 !important;
 }
 
+.border-bot {
+  border-bottom: 1px solid #111;
+}
+
 .border {
   border: 2px solid #111 !important;
 }
 
 hr {
-  border: 2px solid #111 !important;
+  border: 2px solid;
 }
 
 .banner {
@@ -47,6 +53,31 @@ hr {
 
 .card {
   border: none !important;
+}
+
+.wrap-word {
+  overflow-wrap: break-word !important;
+}
+
+.header-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.subheader-text {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.page-text {
+  font-size: 1rem;
+  letter-spacing: 2.5px;
 }
 
 /* Nav */
@@ -66,24 +97,6 @@ hr {
   font-weight: 800;
 }
 
-.subheader-text {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-/* Home */
-
-.main-header {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
 .main-header-mobile {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 800;
@@ -91,9 +104,11 @@ hr {
   text-transform: uppercase;
 }
 
-.page-text {
-  font-size: 1rem;
-  letter-spacing: 2.5px;
+/* Home */
+
+.hero-img {
+  display: flex;
+  align-content: center;
 }
 
 .cta-container {
@@ -101,11 +116,6 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hero-img {
-  display: flex;
-  align-content: center;
 }
 
 .cta-btn {
@@ -117,7 +127,13 @@ hr {
   letter-spacing: 2px;
 }
 
-/* carousel */
+.about-header {
+  border-bottom: 2px solid #111;
+  margin-bottom: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Home - Carousel */
 
 .carousel-home {
   padding-top: 50px;
@@ -128,33 +144,7 @@ hr {
   width: 75%;
 }
 
-.about-header {
-  border-bottom: 2px solid #111;
-  margin-bottom: 20px;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.header-text {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.border-bot {
-  border-bottom: 1px solid #111;
-}
-
 /* Store */
-
-.store-header {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
 
 .products-sub-nav {
   margin-top: 5px;
@@ -225,76 +215,16 @@ hr {
 
 /* Basket */
 
-.basket-header h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
 .remove-item {
   cursor: pointer !important;
 }
 
 /* Checkout */
 
-.checkout-header h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.checkout-subheader {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
 .checkout-success-text {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-/* Profile */
-
-.profile-header h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.profile-subheader {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-/* Add Product Form */
-
-.update-header h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.update-subheader {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -379,49 +309,12 @@ hr {
 
 /* Blog */
 
-.blog-header h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 800 !important;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
 .blog-main {
   margin: auto;
   width: 100%;
 }
 
-.blog-card-title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  border-bottom: 1px solid #111;
-}
-
-.blog-card-subtext {
-  margin: auto;
-  border-bottom: 1px solid #111;
-  width: 50%;
-  margin-bottom: 15px;
-  text-transform: capitalize;
-}
-
-.blog-comment {
-  overflow-wrap: break-word;
-}
-
 /* Contact */
-
-.contact-header h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 800 !important;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
 
 .contact-text {
   margin-top: 15px;
@@ -461,6 +354,10 @@ hr {
   font-size: 1.4rem;
 }
 
+.footer i {
+  color: #f0f3f5 
+}
+
 /* All Auth */
 
 .auth-header h2 {
@@ -498,16 +395,23 @@ hr {
 
 .allauth-form-inner-content a {
   color: #3b3534;
-  /* text-info */
 }
 
-/* media queries */
+/* Media Queries Max-Width*/
 
 @media screen and (max-width: 321px) {
   .toast {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .delivery-header {
+    font-size: 1.25rem;
+  }
+}
+
+/* Media Queries Min-Width*/
 
 @media screen and (min-width: 768px) {
   .about-container {

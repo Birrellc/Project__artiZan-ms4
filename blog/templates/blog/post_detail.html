@@ -3,16 +3,16 @@
 
 <div class="container post-detail-container">
   <div class="row">
-    <div class="col-12 blog-header text-center mt-2 mb-4">
-      <h2>{{ post.title }}</h2>
+    <div class="col-12 text-center mt-2 mb-4">
+      <h2 class="header-text">{{ post.title }}</h2>
     </div>
     <div class="card post-detail-card text-center">
       <div class="card-body my-3 border">
-        <p class="text-muted blog-card-title ">
+        <p class="text-muted subheader-text">
           {{ post.author }} | {{ post.created_on }}
         </p>
-        <p class="card-text blog-card-text">{{ post.content | safe }}</p>
-        <a href="{% url 'blog' %}" class="btn cta-btn ">Back</a>
+        <p class="card-text">{{ post.content | safe }}</p>
+        <a href="{% url 'blog' %}" class="btn cta-btn text-uppercase">Back</a>
       </div>
     </div>
   </div>
@@ -22,13 +22,13 @@
     <div class="col-12">
       {% for comment in comments %}
       <div class="comments border px-2">
-        <p class="blog-card-title">
+        <p class="subheader-text">
           {{ comment.name }}
           <span class="text-muted blog-card-text">
             {{ comment.created_on }}
           </span>
         </p>
-        <div class="blog-comment">
+        <div class="wrap-word">
         {{ comment.body | linebreaks }}
         </div>
       </div>
@@ -40,11 +40,11 @@
             Your comment is awaiting moderation
           </div>
           {% else %}
-          <h3 class="blog-card-title">Leave a comment</h3>
+          <h3 class="subheader-text">Leave a comment</h3>
           <form method="post" class="blog-form">
               {{ comment_form | crispy }}
               {% csrf_token %}
-              <button type="submit" class="btn cta-btn mt-2">Submit</button>
+              <button type="submit" class="btn cta-btn mt-3">Submit</button>
           </form>
           {% endif %}
         </div>
