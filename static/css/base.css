@@ -66,6 +66,14 @@ hr {
   font-weight: 800;
 }
 
+.subheader-text {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 /* Home */
 
 .main-header {
@@ -83,7 +91,7 @@ hr {
   text-transform: uppercase;
 }
 
-.about-text {
+.page-text {
   font-size: 1rem;
   letter-spacing: 2.5px;
 }
@@ -209,6 +217,10 @@ hr {
 
 .btt-cursor {
   cursor: pointer;
+}
+
+.form-control:disabled, .form-control:read-only {
+  background-color: #fff !important;
 }
 
 /* Basket */
