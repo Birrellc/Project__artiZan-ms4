@@ -586,7 +586,7 @@ python3 manage.py loaddata <fixture_name>
 
 11. Back on the Heroku App website click on **View App**.
 
-### AWS (Media & Static)###
+### AWS (Media & Static)
 
 The **static** and **media files** are hosted in the [AWS S3 Bucket](https://aws.amazon.com/). You will need to create an account in AWS and create your S3 bucket. Information about settings up AWS can be found [Amazon S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html).
 
@@ -627,8 +627,14 @@ Brief tutorial:
 
 ## Credits
 
--
+- First Credits go to my mentor Felipe Alarcon for guidance and advice throughout my whole time on this course.
+- Code Institute Staff and content.
+- Code Institute Students.
+- Project was developed by following the Code Institute course materials.
+- [Corey Schafer - Youtube](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) for great Django content
+- [Jose Portilla - Udemy](https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/) more helpful django content and ideas for the blog section
+- [DjangoCentral](https://djangocentral.com/creating-comments-system-with-django/) - This website was used to create the comment section for the blog.
 
 ### Media
 
-- The only image for this project were taken from [Pexels](https://https://www.pexels.com/)
+- The images for this project were taken from [Pexels](https://https://www.pexels.com/) & [Pixabay](https://pixabay.com)
