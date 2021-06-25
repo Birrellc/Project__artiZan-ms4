@@ -3,6 +3,7 @@
 
 
 {% block content %}
+    <!-- Displays product on the page with the required information for the user-->
     <div class="container-fluid product-details-container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -19,7 +20,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="details-container my-5 py-3 text-center">
+                <div class="product-details-section my-5 py-3 text-center">
                     <p class="product-name">{{ product.name }}</p>
                     <p class="lead">${{ product.price }}</p>
                     <p class="small">{{ product.height }}mm (H)</p>
@@ -32,16 +33,17 @@
                     </p>
                     {% endif %}
                     {% if request.user.is_superuser %}
-                    <p class="mt-3">
-                        <small class="ml-3">
+                    <div class="ml-3 mt-3">
                             <a class="text-success" href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i></a> | 
                             <a class="text-danger" href="{% url 'delete_product' product.id %}"><i class="fas fa-trash-alt"></i></a>
-                        </small>
-                    </p>
+                    </div>
                     {% endif %}
                     <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+
+                            <!--Allows products that are not marked as sold to be purchased otherwise the quantity is hidden-->
+                            
                             {% if product.sold != True %}
                             <div class="col-12">
                                 <p class="mt-2"><strong>Quantity:</strong></p>
@@ -52,6 +54,14 @@
                                 </div>
                             </div>
                             {% endif %}
+
+                            <!-- Shows sold text if product is unavailable-->
+
+                            {% if product.sold == True %}
+                            <div>
+                                <p class="sold-text mt-3 text-uppercase">Sold!</p> 
+                            </div>
+                            {% endif %}
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn cta-btn rounded-0 mt-3">
                                     <span class="icon">
@@ -59,10 +69,11 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
+
+                                <!--Allows products that are not marked as sold to be purchased otherwise the add to basket button is hidden-->
+
                                 {% if product.sold != True %}
-                                <input type="submit" class="btn cta-btn rounded-0 text-uppercase mt-3" value="Add to Basket">
-                                {% else %}
-                                <p class="sold-text mt-2 text-uppercase">Sold!</p> 
+                                <input type="submit" class="btn cta-btn rounded-0 text-uppercase mt-3" value="Add to Basket">            
                                 {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">

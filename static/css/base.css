@@ -165,7 +165,7 @@ hr {
   letter-spacing: 5px;
 }
 
-.badge {
+.category-badge {
   color: #3B3534;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -203,6 +203,8 @@ hr {
   position: fixed;
   bottom: 15px;
   right: 15px;
+  border: 1px solid #111;
+  background: #fff;
 }
 
 .btt-cursor {
