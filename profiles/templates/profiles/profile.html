@@ -8,14 +8,14 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col text-center profile-header">
-                <h2 class="mt-2 mb-4">My Profile</h2>
+            <div class="col text-center">
+                <h2 class="mt-2 mb-4  header-text">My Profile</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 mt-4 mb-4">
-                <p class="profile-subheader ">Default Delivery Information</p>
+                <p class="subheader-text ">Default Delivery Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -23,10 +23,10 @@
                 </form>
             </div>
             <div class="col-12 col-lg-6 mt-4 mb-4">
-                <p class="profile-subheader ">Order History</p>
+                <p class="subheader-text">Order History</p>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
-                        <thead class="profile-subheader">
+                        <thead class="subheader-text">
                             <tr>
                                 <th>Order Number</th>
                                 <th>Date</th>
