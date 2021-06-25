@@ -38,7 +38,7 @@ hr {
 
 .banner {
   background: #3B3534;
-  color: aliceblue;
+  color: #f0f8ff;
 }
 
 .delivery-header {
@@ -83,6 +83,11 @@ hr {
   text-transform: uppercase;
 }
 
+.about-text {
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+}
+
 .cta-container {
   padding-top: 50px;
   display: flex;
@@ -90,9 +95,14 @@ hr {
   align-items: center;
 }
 
+.hero-img {
+  display: flex;
+  align-content: center;
+}
+
 .cta-btn {
   color: #f0f3f5 !important;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: #111;
   min-width: 100px;
   font-weight: 400;
@@ -110,20 +120,22 @@ hr {
   width: 75%;
 }
 
-.home-img {
-  display: flex;
-  align-content: center;
-}
-
-.about-container {
-  padding-top: 70px;
-  text-align: center;
-}
-
 .about-header {
   border-bottom: 2px solid #111;
   margin-bottom: 20px;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.border-bot {
+  border-bottom: 1px solid #111;
 }
 
 /* Store */
@@ -179,7 +191,7 @@ hr {
 }
 
 .sold-text {
-  color:#dc3545;
+  color: #dc3545;
   font-size: 1.2rem;
   font-weight: 800;
   font-family: 'Roboto Condensed', sans-serif;
@@ -310,11 +322,12 @@ hr {
 }
 
 .toast-text {
-  color:#111 !important;
+  color: #111 !important;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   font-weight: 800;
 }
+
 /* Product Form */
 
 .btn-file {
@@ -385,6 +398,7 @@ hr {
 .blog-comment {
   overflow-wrap: break-word;
 }
+
 /* Contact */
 
 .contact-header h2 {
@@ -417,7 +431,7 @@ hr {
   font-size: 0.8rem;
   width: 100%;
   padding: 20px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .footer h3 {
@@ -478,6 +492,16 @@ hr {
 @media screen and (max-width: 321px) {
   .toast {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-container {
+    padding-right: 80px;
+  }
+
+  .post-detail-card {
+    margin-bottom: 170px;
   }
 }
 
