@@ -192,106 +192,6 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 
 ---
 
-### Landing Page
-
-As an Art themed website once I got started I knew I had to make sure the landing page was aesthetically please so i chose to go with quite a basic color set in order to avoid chaos and keep it very art themed and minimalistic for the user.
-
-The landing page consists of:
-
-- Navbar
-- Banner
-- Search Bar(on Desktop view)
-- Carousel of a few prints from the website
-- About us section
-- Hero image
-- Social Footer
-
----
-
-### Store
-
-For my store page I browsed various online retailers in multiple sectors and also using the code institute course material i decided to go with a simple product placement in rows of 4 and limited detail below each product so users wouldn't be distracted and also so they could browse products easily. The products are displayed in a card format with a color and border to help them stand out from the white background.
-
-The Store page consists of:
-
-- Navbar
-- Banner
-- Products (in card form)
-- Sort filter
-- Categories filter
-- Small button to return to the top of the page
-- Update & Delete products buttons for admin
-- Ability to mark products as sold (this is for a later date when I manage to implement a stocking system)
-- Social Footer
-
----
-
-### Blog
-
-The Blog page like the rest of the website is of simple format to be quick and easy for the user to view and understand the premis. The plog posts are created in django admin where they can be marked and draft while waiting for review by the owner or immediately published. In the future I would like to add a form for specific users to create the Blog posts on page without having to go into the admin panel. Users can also click on the view button below the blog post to be view the full post and on that page they can also leave comments which have to be approved by the admin on the admin panel in the comments section to prevent unwanted posts. In future I would like to link this feature to user accounts
-
-The Blog page consists of:
-
-- Navbar
-- Banner
-- Blog Posts (in card form)
-- Comments section (when posts have been expanded)
-- Social Footer
-
----
-
-### Contact
-
-The Contact page is very basic as all it contains is an image and a table containing some contact numbers and email addresses as I wanted to experiment with using a model to just display information added from the admin panel (This practice here made it possible for me to understand the concepts needed to setup my blog app with the help of the tutorials i used for that app also)
-
-The Contact page consists of:
-
-- Navbar
-- Banner
-- Contact Details (displayed in card)
-- Image
-- Social Footer
-
----
-
-### Profile
-
-The User Profile page consists of 2 elements, we have a form which users can fill in their delivery information and update to make checkouts easier and faster and also the users order history is displayed in order for the user to interact with.
-
-The Profile page consists of:
-
-- Navbar
-- Banner
-- Delivery Information Form
-- Order History
-- Social Footer
-
----
-
-### Basket/Checkout
-
-The Basket & Checkout pages are both quite similar showing the product information that the user is purchasing plus the calculated total cost and delivery for the products.
-The checkout page also has a form for delivery information and payment but still displays the users order.
-
-- Navbar
-- Banner
-- Delivery Information Form & payment (checkout)
-- Order
-- Social Footer
-
----
-
-### Product Management (Add Product / Edit Product)
-
-The Product Management page takes the admin to the add product page but also this page shares the same design as the edit product page which is simply just a form where the admin can add products or edit them.
-
-- Navbar
-- Banner
-- Product Form
-- Social Footer
-
----
-
 ### Strategy Plane
 
 Strategy Plane
@@ -354,7 +254,93 @@ Also I find that Art is a hobbiest community so I decided that the website shoul
 - The Website is laid out in a simple and easy to use manner to provide ease of use to any site visitors.
 - Toast messages are displayed sidewide on interaction to help guide and confirm for users.
 
-- Please see sections above for specific page struction
+- Individual page structure below:
+
+#### Landing Page
+
+As an Art themed website once I got started I knew I had to make sure the landing page was aesthetically please so i chose to go with quite a basic color set in order to avoid chaos and keep it very art themed and minimalistic for the user.
+
+The landing page consists of:
+
+- Navbar
+- Banner
+- Search Bar(on Desktop view)
+- Carousel of a few prints from the website
+- About us section
+- Hero image
+- Social Footer
+
+#### Store
+
+For my store page I browsed various online retailers in multiple sectors and also using the code institute course material i decided to go with a simple product placement in rows of 4 and limited detail below each product so users wouldn't be distracted and also so they could browse products easily. The products are displayed in a card format with a color and border to help them stand out from the white background.
+
+The Store page consists of:
+
+- Navbar
+- Banner
+- Products (in card form)
+- Sort filter
+- Categories filter
+- Small button to return to the top of the page
+- Update & Delete products buttons for admin
+- Ability to mark products as sold (this is for a later date when I manage to implement a stocking system)
+- Social Footer
+
+#### Blog
+
+The Blog page like the rest of the website is of simple format to be quick and easy for the user to view and understand the premis. The plog posts are created in django admin where they can be marked and draft while waiting for review by the owner or immediately published. In the future I would like to add a form for specific users to create the Blog posts on page without having to go into the admin panel. Users can also click on the view button below the blog post to be view the full post and on that page they can also leave comments which have to be approved by the admin on the admin panel in the comments section to prevent unwanted posts. In future I would like to link this feature to user accounts
+
+The Blog page consists of:
+
+- Navbar
+- Banner
+- Blog Posts (in card form)
+- Comments section (when posts have been expanded)
+- Social Footer
+
+#### Contact
+
+The Contact page is very basic as all it contains is an image and a table containing some contact numbers and email addresses as I wanted to experiment with using a model to just display information added from the admin panel (This practice here made it possible for me to understand the concepts needed to setup my blog app with the help of the tutorials i used for that app also)
+
+The Contact page consists of:
+
+- Navbar
+- Banner
+- Contact Details (displayed in card)
+- Image
+- Social Footer
+
+#### Profile
+
+The User Profile page consists of 2 elements, we have a form which users can fill in their delivery information and update to make checkouts easier and faster and also the users order history is displayed in order for the user to interact with.
+
+The Profile page consists of:
+
+- Navbar
+- Banner
+- Delivery Information Form
+- Order History
+- Social Footer
+
+#### Basket/Checkout
+
+The Basket & Checkout pages are both quite similar showing the product information that the user is purchasing plus the calculated total cost and delivery for the products.
+The checkout page also has a form for delivery information and payment but still displays the users order.
+
+- Navbar
+- Banner
+- Delivery Information Form & payment (checkout)
+- Order
+- Social Footer
+
+#### Product Management (Add Product / Edit Product)
+
+The Product Management page takes the admin to the add product page but also this page shares the same design as the edit product page which is simply just a form where the admin can add products or edit them.
+
+- Navbar
+- Banner
+- Product Form
+- Social Footer
 
 ---
 
