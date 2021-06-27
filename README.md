@@ -445,6 +445,13 @@ Testing has is logged in its own document [HERE]()
 
 ### Known Bugs
 
+#### Navbar jumping on page load:
+
+- Im currently having an issue that when a user navigates through the website the navbar jumps when the page is loading in and so far I have been unable to fix the problem i have tried:
+
+Deleting the css from base.css and was unsuccessful.
+manually removing some of the bootstrap css in navbar.html which was also unsucccesful.
+
 
 
 ---
