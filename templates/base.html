@@ -2,140 +2,147 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
 
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+<head>
 
-    {% block extra_meta %}
-    {% endblock %}
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block corecss %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
 
-    {% block corejs %}
-        <script src="https://kit.fontawesome.com/71aaf157b7.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-    </script>
-    <!-- Stripe -->
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/71aaf157b7.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+  </script>
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  {% endblock %}
 
-    <title>ArtiZan</title>
-  </head>
-  <body>
-    <header class="container-fluid text-center fixed-top">
-        <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg bg-white px-0">
-                    {% include 'includes/main-nav.html' %}
-                    {% include 'includes/mobile-nav.html' %}
-                </nav>
-                <div id="delivery-banner" class="row text-center">
-                    <div class="col-12 border banner">
-                        <h3 class="delivery-header">Free Delivery on Orders Over ${{ free_delivery_threshold }}!</h3>                
-                    </div>
-                </div>            
-            </div>
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>ArtiZan</title>
+</head>
+
+<body>
+  <header class="container-fluid text-center fixed-top">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg bg-white px-0">
+          {% include 'includes/main-nav.html' %}
+          {% include 'includes/mobile-nav.html' %}
+        </nav>
+        <div id="delivery-banner" class="row text-center">
+          <div class="col-12 border banner">
+            <h3 class="delivery-header">Free Delivery on Orders Over ${{ free_delivery_threshold }}!</h3>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+        {% with message.level as level %}
+            {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+        {% endwith %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
-    <div class="content">
+  {% block page_header %}
+  {% endblock %}
+  
+  <div class="content">
     {% block content %}
     {% endblock %}
-</div>
+  </div>
 
-   <!-- Page Footer -->
-   <footer class="container-fluid footer border">
+  <!-- Page Footer -->
+  <footer class="container-fluid footer border">
     <div class="row">
-        <div class="col-12 social text-center">
-            <h3>Social</h3>
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a aria-label="Twitter" href="https://twitter.com" target="_blank" rel="noopener">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a aria-label="Pintrest" href="https://pintrest.com" target="_blank" rel="noopener">
-                        <i class="fab fa-pinterest"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a aria-label="Instagram" href="https://instagram.com" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a aria-label="Linkedin" href="https://www.linkedin.com/in/chrisbirrell17/" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a aria-label="GitHub" href="https://github.com/Birrellc" target="_blank" rel="noopener">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a aria-label="Portfolio" href="https://chrisbirrell.tech/" target="_blank" rel="noopener">
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="col-12 social text-center">
+        <h3>Social</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a aria-label="Twitter" href="https://twitter.com" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="Pintrest" href="https://pintrest.com" target="_blank" rel="noopener">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="Instagram" href="https://instagram.com" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a aria-label="Linkedin" href="https://www.linkedin.com/in/chrisbirrell17/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="GitHub" href="https://github.com/Birrellc" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="Portfolio" href="https://chrisbirrell.tech/" target="_blank" rel="noopener">
+              <i class="fas fa-paper-plane"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="row mt-3">
-        <div class="col-12 text-center border-top pt-2">
-            © Chris Birrell - 2021
-        </div>
+      <div class="col-12 text-center border-top pt-2">
+        © Chris Birrell - 2021
+      </div>
     </div>
-</footer>
+  </footer>
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
-    
-  </body>
+  {% block postloadjs %}
+  <script type="text/javascript">
+    $('.toast').toast('show');
+  </script>
+  {% endblock %}
+
+</body>
+
 </html>

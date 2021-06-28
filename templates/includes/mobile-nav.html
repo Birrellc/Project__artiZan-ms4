@@ -7,20 +7,19 @@
           <p class="my-0">Menu</p>
         </div>
       </li>
-      
+
       <li class="dropdown-menu border" aria-labelledby="user-options-mob">
         {% if request.user.is_superuser %}
         <a href="{% url 'admin:index' %}" class="dropdown-item">Dashboard</a>
         <h6 class="dropdown-header subheader-text">Admin</h6> 
         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-        <a>
-          <hr class="dropdown-divider"></a>
+        <hr class="dropdown-divider">
         {% endif %}  
         <h6 class="dropdown-header subheader-text">Site</h6>  
         <a href="{% url 'products' %}" class="dropdown-item">Store</a>
         <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
         <a href="{% url 'contact' %}" class="dropdown-item">Contact</a>
-        <hr class="dropdown-divider"></a>
+        <hr class="dropdown-divider">
         <h6 class="dropdown-header subheader-text">User</h6>
         {% if request.user.is_authenticated %}
         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
@@ -44,7 +43,9 @@
       <li class="list-inline-item px-0 mx-1">
         <a class="nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
           <div class="text-center">
-            <div><i class="fas fa-shopping-cart"></i></div>
+            <div>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
             <p class="my-0 small">
               {% if grand_total %}
               ${{ grand_total|floatformat:2 }}
