@@ -18,7 +18,7 @@ Validation testing for HTML, CSS, JS & Python:
 - On first try I received multiple formatting errors for my nav pages but nothing else in which i have placed list elements without and unordered list.
 - I rectified the errors and now when I paste the Website URL in the formatter I receive no errors as displayed below.
 
-![HTML VALIDATION TEST](../media/readme-images/html-validation.png)
+![HTML VALIDATION TEST](/media/readme-images/html-validation.png)
 
 ---
 
@@ -29,7 +29,7 @@ Validation testing for HTML, CSS, JS & Python:
 - I then proceeded to run my code through [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and received no errors as shown in the image below.
 - I also then applied a red border to all my elements to check for any overflow issues & there are none.
 
-![CSS VALIDATION TEST](../media/readme-images/css-validation.png)
+![CSS VALIDATION TEST](/media/readme-images/css-validation.png)
 
 ---
 
@@ -38,7 +38,7 @@ Validation testing for HTML, CSS, JS & Python:
 - Alot of the JavaScript for this project came from either [Stripe](https://jshint.com/) or the [Codeinstitute Final Project](https://codeinstitute.net)
 - For JavaScript validation I ran my code through [JsHint](https://jshint.com/) and received no errors as show in the image below.
 
-![JS VALIDATION TEST](../media/readme-images/js-validation.png)
+![JS VALIDATION TEST](/media/readme-images/js-validation.png)
 
 ---
 
@@ -72,8 +72,8 @@ I ran a desktop and mobile test with google chromes build in lighthouse tool and
 
 ### Desktop
 
-![Desktop Lighthouse](../media/readme-images/lighthouse-desktop.png)
+![Desktop Lighthouse](/media/readme-images/lighthouse-desktop.png)
 
 ### Mobile
 
-![Desktop Lighthouse](../media/readme-images/lighthouse-mobile.png)
+![Desktop Lighthouse](/media/readme-images/lighthouse-mobile.png)
