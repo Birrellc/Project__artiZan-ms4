@@ -127,7 +127,7 @@ hr {
 }
 
 .main-nav {
-  padding-left: 50px;
+  padding-left: 80px !important;
 }
 
 .nav-link {
