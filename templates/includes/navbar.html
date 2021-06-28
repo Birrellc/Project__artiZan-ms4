@@ -26,7 +26,7 @@
 
     <div class="col-12 col-lg-3 my-auto">
         <ul class="list-inline list-unstyled text-center my-0">
-            <li class="list-inline-item dropdown">
+            <ul class="list-inline-item dropdown">
                 <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
                         <div><i class="fas fa-caret-square-down fa-lg"></i></div>
@@ -53,7 +53,7 @@
                         <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                     {% endif %}
                 </div>
-            </li>
+            </ul>
             <li class="list-inline-item">
                 <a class="nav-link" href="{% url 'view_basket' %}">
                     <div class="text-center">
@@ -94,7 +94,7 @@
 
 <div class="row bg-white">
     <nav class="navbar navbar-expand-lg navbar-light w-100">
-        <li class="list-inline-item dropdown">
+        <ul class="list-inline-item dropdown">
             <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-caret-square-down"></i></div>
@@ -121,7 +121,7 @@
                         <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                     {% endif %}
             </div>
-        </li>
+        </ul>
         <li class=" list-inline-item text-center">
             <a href="{% url 'home' %}" class="nav-link d-block d-lg-none">
                 <h2 class="main-header-mobile my-0">ArtiZan</h2>
