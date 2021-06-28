@@ -14,12 +14,22 @@ Validation testing for HTML, CSS, JS & Python:
 
 ### HTML
 
+- For HTML testing I ran my code through [W3C HTML Validator](https://validator.w3.org) by URI validation using my [Deployed Live Site](https://artizan-prints.herokuapp.com/).
+- On first try I received multiple formatting errors for my nav pages but nothing else in which i have placed list elements without and unordered list.
+- I rectified the errors and now when I paste the Website URL in the formatter I receive no errors as displayed below.
 
+![HTML VALIDATION TEST](../media/readme-images/html-validation.png)
 
 ---
 
 ### CSS
 
+- For CSS testing I first put my **base.css** code through [Auto Prefixer CSS](https://autoprefixer.github.io) to make sure my CSS has all the correct vendor prefixes.
+- The commit showing these changes being implemented can be found [Here](https://github.com/Birrellc/artiZan-ms4/commit/4236c4dde0ddee1c57d516f0a3dadc12c40869fc)
+- I then proceeded to run my code through [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and received no errors as shown in the image below.
+- I also then applied a red border to all my elements to check for any overflow issues & there are none.
+
+![CSS VALIDATION TEST](../media/readme-images/css-validation.png)
 
 ---
 
