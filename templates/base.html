@@ -42,12 +42,13 @@
     <title>ArtiZan</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid text-center fixed-top">
         <div class="row">
             <div class="col-12">
-                <div>
-                    {% include 'includes/navbar.html' %}
-                </div>
+                <nav class="navbar navbar-expand-lg bg-white px-0">
+                    {% include 'includes/main-nav.html' %}
+                    {% include 'includes/mobile-nav.html' %}
+                </nav>
                 <div id="delivery-banner" class="row text-center">
                     <div class="col-12 border banner">
                         <h3 class="delivery-header">Free Delivery on Orders Over ${{ free_delivery_threshold }}!</h3>                

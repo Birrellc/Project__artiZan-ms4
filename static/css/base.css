@@ -108,6 +108,10 @@ hr {
   text-transform: uppercase;
 }
 
+.nav-link {
+  color: #111 !important;
+}
+
 /* Home */
 
 .hero-img {
@@ -413,6 +417,9 @@ hr {
   .delivery-header {
     font-size: 1.25rem;
   }
+  .mobile-nav {
+    width: 100%;
+  }
 }
 
 /* Media Queries Min-Width*/
@@ -426,6 +433,9 @@ hr {
     margin-bottom: 170px;
   }
 }
+  nav {
+    width:100;
+  }
 
 @media screen and (min-width: 768px) {
   .about-container {
