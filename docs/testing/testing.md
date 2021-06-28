@@ -77,3 +77,123 @@ I ran a desktop and mobile test with google chromes build in lighthouse tool and
 ### Mobile
 
 ![Desktop Lighthouse](/media/readme-images/lighthouse-mobile.png)
+
+---
+
+## Manual Testing
+
+### Home
+
+| Functionality               | Expected Outcome                    | Pass/Fail |
+| ----------------------------|-------------------------------------|-----------|
+| Clicking `view store` button| Expect to be taken to the store page| Pass      |
+| Carousel                    | Expect images to auto play          | Pass      |
+
+
+### Navigation
+
+#### Main Nav Menu
+
+| Functionality                                  | Expected Outcome                                                  | Pass/Fail |
+| -----------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking on `home` link                        | Redirects to the "Index" page                                     | Pass      |
+| Clicking on `store` link                       | Redirects to the Store Page                                       | Pass      |
+| Clicking on `blog` link                        | Redirects to the Blog page                                        | Pass      |
+| Clicking on `contact` link                     | Redirects to the Contact page                                     | Pass      |
+| Clicking on `profile` link                     | Redirects to the Profile page                                     | Pass      |
+| Clicking on `log Out` link                     | Logs out user                                                     | Pass      |
+| Clicking on `register` link                    | Redirects to the Register page                                    | Pass      |
+| Clicking on `login` link                       | Redirects to the Register page                                    | Pass      |  
+| Clicking on `dashboard` link as Admin          | Redirects to the dashboard page when logged in as admin           | Pass      |
+| Clicking on `product management` link as Admin | Redirects to the product management page when logged in as admin  | Pass      |
+
+#### Sub Nav Menu
+
+| Functionality                                  | Expected Outcome                                                  | Pass/Fail |
+| -----------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking on `home` link                        | Redirects to the "Index" page                                     | Pass      |
+| Clicking on `store` link                       | Redirects to the Store Page                                       | Pass      |
+| Clicking on `blog` link                        | Redirects to the Blog page                                        | Pass      |
+| Clicking on `contact` link                     | Redirects to the Contact page                                     | Pass      |
+
+#### Footer
+
+| Functionality                                  | Expected Outcome                                                  | Pass/Fail |
+| -----------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking on `Twitter` icon                     | Opens Twitter website in new tab                                  | Pass      |
+| Clicking on `Instagram` icon                   | Opens Instagram website in new tab                                | Pass      |
+| Clicking on `Pinterest` icon                   | Opens Pinterest website in new tab                                | Pass      |
+| Clicking on `GitHub` icon                      | Opens my Github in a new tab                                      | Pass      |
+| Clicking on `LinkedIn` icon                    | Opens my LinkedIn in a new tab                                    | Pass      |
+| Clicking on `Paper Airplane` icon              | Opens my Portfolio in a new tab                                   | Pass      |
+
+### Store
+
+| Functionality                                                         | Expected Outcome                                                  | Pass/Fail |
+| ----------------------------------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking `Sort` shows all sort options                                | Shows options to sort by                                          | Pass      |      
+| Clicking `Sort` options work correctly                                | Each sort filter sorts the products the correct way               | Pass      |
+| Clicking `Category` shows all category options                        | Show list of categories to view                                   | Pass      |
+| Clicking `Category` options working correctly                         | Being able to filter by each category by clicking on them         | Pass      |
+| Clicking `Product image` to open product specific page                | Displaying the correct product on a new detailed page             | Pass      |
+| Clicking `view` button to open product specific page                  | Displaying the correct product on a new detailed page             | Pass      |
+| Clicking green `edit` icon to edit product (logged in as admin)       | Redirects to the edit product page for that specific product      | Pass      |
+| Clicking red `delete` icon to delete the product (logged in as admin) | Displaying the correct product on a new detailed page             | Pass      |
+
+### Product Detail Page (specific product page)
+
+| Functionality                                                         | Expected Outcome                                                  | Pass/Fail |
+| ----------------------------------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking on `keep shopping` button                                    | Takes the user back to the overall store page                     | Pass      |
+| Clicking on `add to basket` button                                    | Adds the product to the users basket                              | Pass      |
+| Clicking green `edit` icon to edit product (logged in as admin)       | Redirects to the edit product page for that specific product      | Pass      |
+| Clicking red `delete` icon to delete the product (logged in as admin) | Displaying the correct product on a new detailed page             | Pass      |
+
+## Blog
+
+| Functionality                                                         | Expected Outcome                                                  | Pass/Fail |
+| ----------------------------------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking on `Read more` button                                        | Opens a new page with the full blog post and comment section      | Pass      |
+
+## Post Detail (Blog post page)
+
+| Functionality                                                         | Expected Outcome                                                  | Pass/Fail |
+| ----------------------------------------------------------------------|-------------------------------------------------------------------|-----------|
+| Clicking on `back` button                                             | Redirects to the main blog page                                   | Pass      |
+| Filling out `comments` form                                           | creates a comment on the specific blog(admin has to approve post) | Pass      |
+
+## Contact
+
+**NO NEED TO TEST CONTACT PAGE NO USER INTERACTIVITY APART FROM ADMIN WHICH HAS BEEN TESTED BY CREATING THE CONTENT IN THE ADMIN DASHBOARD THAT IS DISPLAYED ON THE PAGE**
+
+## Product Management (ADMIN TOOL)
+
+### Add product
+
+| Functionality                                                         | Expected Outcome                                                  | Pass/Fail |
+| ----------------------------------------------------------------------|-------------------------------------------------------------------|-----------|
+| Fill out the correct fields to add a new product                      | New product to appear in store                                    | Pass      |
+| Clicking on `cancel` button                                           | Redirects to the main blog page                                   | Pass      |
+
+## Account
+
+### Registration
+
+| Functionality               | Expected Outcome                                                                                                               | Pass/Fail |
+| ----------------------------|--------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Filling form out and signup | Registers the user and redirects to verify email address. If registration form is incomplete, shows Please fill out this field | Pass      |
+| Clicking on `back` button   | Redirects to the main blog page                                                                                                | Pass      |
+
+### Login in
+
+| Functionality                                              | Expected Outcome                                             | Pass/Fail |
+| -----------------------------------------------------------|--------------------------------------------------------------|-----------|
+| Clicking on `Sign In` with correct username and password   | Directs user to the home page                                | Pass      |
+| Clicking on `Sign In` with Incorrect username and password | flash message to user showing incorrect username or password | Pass      |
+| Clicking on Forgot password                                | Opens "Forgot password" page                                 | Pass      |
+
+### Profile
+
+| Functionality                                              | Expected Outcome                                             | Pass/Fail |
+| -----------------------------------------------------------|--------------------------------------------------------------|-----------|
+
