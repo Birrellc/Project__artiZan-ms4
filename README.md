@@ -24,7 +24,9 @@ Due to time constraints from when I started this project till my submission I wa
 
 ### Wireframes
 
-The initial wireframes for this project [Wireframes](https://github.com/Birrellc/artiZan-ms4/tree/master/docs/wireframes)
+The wireframes for this project [Wireframes](https://github.com/Birrellc/artiZan-ms4/tree/master/docs/wireframes)
+
+The user sitemap for this project [SiteMap](https://github.com/Birrellc/artiZan-ms4/tree/master/docs/wireframes/sitemap.pdf)
 
 _soon after starting this project I could make huge improvements to the initial design plan and immediately decided to change up the process._
 
