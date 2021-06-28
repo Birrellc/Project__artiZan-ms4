@@ -435,7 +435,7 @@ The images used in this project came from [Pexels](https://www.pexels.com) & [Pi
 
 ## Testing
 
-Testing has is logged in its own document [HERE]()
+Testing has is logged in its own document [HERE](https://github.com/Birrellc/artiZan-ms4/blob/master/docs/testing/testing.md)
 
 ---
 
