@@ -8,26 +8,23 @@
                 </div>
             </li>
             <li class="dropdown-menu border" aria-labelledby="user-options-mob">
-                {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                <a>
-                    <h6 class="dropdown-header">Admin</h6>
-                </a>
+
+                    <h6 class="dropdown-header subheader-text">Admin</h6>
+
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 <a>
                     <hr class="dropdown-divider"></a>
                 {% endif %}
-                <a>
-                    <h6 class="dropdown-header">Site</h6>
-                </a>
+
+                    <h6 class="dropdown-header subheader-text">Site</h6>
+
                 <a href="{% url 'products' %}" class="dropdown-item">Store</a>
                 <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact</a>
-                <a>
                     <hr class="dropdown-divider"></a>
-                <a>
-                    <h6 class="dropdown-header">User</h6>
-                </a>
+                    <h6 class="dropdown-header subheader-text">User</h6>
+                {% if request.user.is_authenticated %}
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}

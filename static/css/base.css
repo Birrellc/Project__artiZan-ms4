@@ -126,6 +126,10 @@ hr {
   text-transform: uppercase;
 }
 
+.main-nav {
+  padding-left: 50px;
+}
+
 .nav-link {
   color: #111 !important;
 }
