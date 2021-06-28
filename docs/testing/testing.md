@@ -35,10 +35,16 @@ Validation testing for HTML, CSS, JS & Python:
 
 ### JavaScript
 
+- Alot of the JavaScript for this project came from either [Stripe](https://jshint.com/) or the [Codeinstitute Final Project](https://codeinstitute.net)
+- For JavaScript validation I ran my code through [JsHint](https://jshint.com/) and received no errors as show in the image below.
 
+![JS VALIDATION TEST](../media/readme-images/js-validation.png)
 
 ---
 
 ### Python
 
+- For Python testing I ran my code through [Pep8 Online](http://pep8online.com/).
+- I ran all my python files through this validator and came up with no serious code breaking errors only the occasional line length and no new line issues
+- I have chosen not to display images for this test due to the number of files tested.
 
