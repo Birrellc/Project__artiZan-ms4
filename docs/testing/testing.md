@@ -48,3 +48,32 @@ Validation testing for HTML, CSS, JS & Python:
 - I ran all my python files through this validator and came up with no serious code breaking errors only the occasional line length and no new line issues
 - I have chosen not to display images for this test due to the number of files tested.
 
+---
+
+## Responsive Testing
+
+Full list of tested resolutions with [DevTools](https://developer.chrome.com/docs/devtools/) & [Responsivley App](https://responsively.app/):
+
+1. iPhone 5/5se 320px
+2. iPhone X 375px
+3. Pixel 2 411px
+4. iPhone 6/7/8 Plus 414px
+5. Ipad 768px
+6. Nexus 10 800px
+7. Generic Laptop 1280px
+8. MacBook Air 1440px
+9. Desktop 1920px
+
+---
+
+## Lighthouse
+
+I ran a desktop and mobile test with google chromes build in lighthouse tool and received the following results:
+
+### Desktop
+
+![Desktop Lighthouse](../media/readme-images/lighthouse-desktop.png)
+
+### Mobile
+
+![Desktop Lighthouse](../media/readme-images/lighthouse-mobile.png)
