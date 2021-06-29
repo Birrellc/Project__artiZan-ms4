@@ -2,108 +2,117 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="header-text mb-4 mt-2">Store</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="header-text mb-4 mt-2">Store</h2>
 
-                <!-- Displays category if filtered by-->
+            <!-- Displays category if filtered by-->
 
-                {% for c in current_categories %}
-                    <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 category-badge header-text">{{ c.friendly_name }}</span>
-                    </a>
+            {% for c in current_categories %}
+            <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <span class="p-2 mt-2 category-badge header-text">{{ c.friendly_name }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <ul class="col-12 list-inline-item products-sub-nav text-uppercase">
+            <li class="nav-item dropdown list-inline-item">
+
+                <!--Sort Feature-->
+
+                <a class="nav-link" href="#" id="all--link" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Sort
+                </a>
+                <div class="dropdown-menu product-dropdown border" aria-labelledby="all--link">
+                    <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item"
+                        class="dropdown-item">Name</a>
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item"
+                        class="dropdown-item ">Price</a>
+                    <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item"
+                        class="dropdown-item ">Category</a>
+                </div>
+            </li>
+
+            <!--Category Selector-->
+
+            <li class="nav-item dropdown list-inline-item">
+                <a class="logo-font nav-link text-black" href="#" id="clothing-link" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Category
+                </a>
+                <div class="dropdown-menu product-dropdown border" aria-labelledby="clothing-link">
+                    <a href="{% url 'products' %}" class="dropdown-item">All </a>
+                    <a href="{% url 'products' %}?category=digital_art" class="dropdown-item">Digital Art</a>
+                    <a href="{% url 'products' %}?category=classic_art" class="dropdown-item">Classic Art</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--Where Products are rendered-->
+
+    <div class="row">
+        <div class="gallery-container col-12">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 my-3 col-lg-3">
+                    <div class="card product-card rounded-0 h-100">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid rounded-0" src="{{ product.image.url }}"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid rounded-0" src="" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body text-center">
+                            <p class="product-name">{{ product.name }}</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead">${{ product.price }}</p>
+                                </div>
+                            </div>
+                            {% if product.category %}
+                            <p class="small">
+                                <a class="text-muted" hreef="{% url 'products' %}?category={{ product.category.name }}">
+                                    {{ product.category.friendly_name }}
+                                </a>
+                            </p>
+                            {% endif %}
+
+                            <!--Mark Products as sold (this is for when I implement a stock system in the future for items that are limited)-->
+
+                            {% if product.sold != True %}
+                            <div class="col-12 mb-2">
+                                <a href="{% url 'product_detail' product.id %}"
+                                    class="btn cta-btn text-uppercase">View</a>
+                            </div>
+                            {% else %}
+                            <div>
+                                <p class="sold-text mt-2 text-uppercase">Sold!</p>
+                            </div>
+                            {% endif %}
+                            {% if request.user.is_superuser %}
+                            <div class="ml-5 mt-3">
+                                <a class="text-success" href="{% url 'edit_product' product.id %}"><i
+                                        class="fas fa-edit"></i></a> |
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}"><i
+                                        class="fas fa-trash-alt"></i></a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="row">
-            <ul class="col-12 list-inline-item products-sub-nav text-uppercase">
-                <li class="nav-item dropdown list-inline-item">
-
-                    <!--Sort Feature-->
-
-                    <a class="nav-link" href="#" id="all--link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort 
-                    </a>
-                    <div class="dropdown-menu product-dropdown border" aria-labelledby="all--link">
-                        <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item" class="dropdown-item">Name</a>
-                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" class="dropdown-item ">Price</a>
-                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item" class="dropdown-item ">Category</a>
-                    </div>
-                </li>
-
-                    <!--Category Selector-->
-        
-                <li class="nav-item dropdown list-inline-item">
-                    <a class="logo-font nav-link text-black" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Category
-                    </a>
-                    <div class="dropdown-menu product-dropdown border" aria-labelledby="clothing-link">
-                        <a href="{% url 'products' %}" class="dropdown-item">All </a>
-                        <a href="{% url 'products' %}?category=digital_art" class="dropdown-item">Digital Art</a>
-                        <a href="{% url 'products' %}?category=classic_art" class="dropdown-item">Classic Art</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <!--Where Products are rendered-->
-
-        <div class="row">
-            <div class="gallery-container col-12">
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 my-3 col-lg-3">
-                            <div class="card product-card rounded-0 h-100">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid rounded-0" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid rounded-0" src="" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body text-center">
-                                    <p class="product-name">{{ product.name }}</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead">${{ product.price }}</p>
-                                        </div>
-                                    </div>
-                                    {% if product.category %}
-                                    <p class="small">
-                                        <a class="text-muted" hreef="{% url 'products' %}?category={{ product.category.name }}">
-                                            {{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-
-                                    <!--Mark Products as sold (this is for when I implement a stock system in the future for items that are limited)-->
-
-                                    {% if product.sold != True %}
-                                    <div class="col-12 mb-2">
-                                        <a href="{% url 'product_detail' product.id %}" class="btn cta-btn text-uppercase">View</a>
-                                    </div>
-                                    {% else %}
-                                    <div>
-                                        <p class="sold-text mt-2 text-uppercase">Sold!</p>
-                                    </div>
-                                    {% endif %}
-                                    {% if request.user.is_superuser %}
-                                    <div class="ml-5 mt-3">
-                                        <a class="text-success" href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i></a> | 
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}"><i class="fas fa-trash-alt"></i></a>
-                                    </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
     </div>
+</div>
 
     <!--Button to scroll back to the top of the page-->
 

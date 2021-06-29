@@ -2,36 +2,36 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="header-text mt-2 mb-4">Product Management</h2>
-                <h3 class="subheader-text">Add a Product</h3>
-                <hr>
-            </div>
-        </div>
-
-        <!--Form for adding products-->
-
-        <div class="row">
-            <div class="col-12">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-right mt-3">
-                        <a class="btn cta-btn rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn cta-btn rounded-0" type="submit">Add Product</button>
-                    </div>
-                </form>
-            </div>            
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="header-text mt-2 mb-4">Product Management</h2>
+            <h3 class="subheader-text">Add a Product</h3>
+            <hr>
         </div>
     </div>
+
+    <!--Form for adding products-->
+
+    <div class="row">
+        <div class="col-12">
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
+                <div class="text-right mt-3">
+                    <a class="btn cta-btn rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn cta-btn rounded-0" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

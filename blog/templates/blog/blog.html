@@ -2,27 +2,27 @@
 {% load static %}
 
 {% block content %}
-  <div class="container">
-    <div class="row">
+<div class="container">
+  <div class="row">
       <div class=" col-12 text-center mb-4 mt-2">
           <h2 class="header-text"> ARTIZAN BLOG & NEWS</h2>
       </div>
-    </div>
   </div>
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-12 blog-main text-center">
-      {% for post in post_list %}
-      <div class="card blog-card my-3">
-        <div class="card-body border">
-          <h2 class="card-title subheader-text">{{ post.title }}</h2>
-          <p class="card-text blog-card-subtext text-muted">{{ post.author }} | {{ post.created_on}} </p>
-          <p class="card-text">{{post.content|slice:":200"}}...</p>
-          <a href="{% url 'post_detail' post.slug  %}" class="btn cta-btn text-uppercase">Read More &rarr;</a>
-        </div>
+      <div class="col-12 blog-main text-center">
+          {% for post in post_list %}
+          <div class="card blog-card my-3">
+              <div class="card-body border">
+                  <h2 class="card-title subheader-text">{{ post.title }}</h2>
+                  <p class="card-text blog-card-subtext text-muted">{{ post.author }} | {{ post.created_on}} </p>
+                  <p class="card-text">{{post.content|slice:":200"}}...</p>
+                  <a href="{% url 'post_detail' post.slug  %}" class="btn cta-btn text-uppercase">Read More &rarr;</a>
+              </div>
+          </div>
+          {% endfor %}
       </div>
-      {% endfor %}
-    </div>
   </div>
 </div>
 {% endblock %}

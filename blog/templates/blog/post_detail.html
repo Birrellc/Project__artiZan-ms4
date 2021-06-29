@@ -1,54 +1,58 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load crispy_forms_tags %}
 
 <div class="container post-detail-container">
   <div class="row">
-    <div class="col-12 text-center mt-2 mb-4">
-      <h2 class="header-text">{{ post.title }}</h2>
-    </div>
-    <div class="card post-detail-card text-center">
-      <div class="card-body my-3 border">
-        <p class="text-muted subheader-text">
-          {{ post.author }} | {{ post.created_on }}
-        </p>
-        <p class="card-text">{{ post.content | safe }}</p>
-        <a href="{% url 'blog' %}" class="btn cta-btn text-uppercase">Back</a>
+      <div class="col-12 text-center mt-2 mb-4">
+          <h2 class="header-text">{{ post.title }}</h2>
       </div>
-    </div>
+      <div class="card post-detail-card text-center">
+          <div class="card-body my-3 border">
+              <p class="text-muted subheader-text">
+                  {{ post.author }} | {{ post.created_on }}
+              </p>
+              <p class="card-text">{{ post.content | safe }}</p>
+              <a href="{% url 'blog' %}" class="btn cta-btn text-uppercase">Back</a>
+          </div>
+      </div>
   </div>
 </div>
-<div class="container">
+<div class="container comments-container">
   <div class="row">
     <div class="col-12">
-      {% for comment in comments %}
-      <div class="comments border px-2">
-        <p class="subheader-text">
-          {{ comment.name }}
-          <span class="text-muted blog-card-text">
-            {{ comment.created_on }}
-          </span>
-        </p>
-        <div class="wrap-word">
-        {{ comment.body | linebreaks }}
-        </div>
-      </div>
-      <hr>
-      {% endfor %}
-      <div class="card-body border mt-4">
-          {% if new_comment %}
-          <div class="alert alert-success" role="alert">
-            Your comment is awaiting moderation
-          </div>
-          {% else %}
-          <h3 class="subheader-text">Leave a comment</h3>
-          <form method="post" class="blog-form">
-              {{ comment_form | crispy }}
-              {% csrf_token %}
-              <button type="submit" class="btn cta-btn mt-3">Submit</button>
-          </form>
-          {% endif %}
-        </div>
+      <h2 class="header-text">Comments:</h2>
     </div>
+      <div class="col-12">
+          {% for comment in comments %}
+          <div class="comments border px-2">
+              <p class="subheader-text">
+                  {{ comment.name }}
+                  <span class="text-muted blog-card-text">
+                      {{ comment.created_on }}
+                  </span>
+              </p>
+              <div class="wrap-word">
+                  {{ comment.body | linebreaks }}
+              </div>
+          </div>
+          <hr>
+          {% endfor %}
+          <div class="card-body border mt-4">
+              {% if new_comment %}
+              <div class="alert alert-success" role="alert">
+                  Your comment is awaiting moderation
+              </div>
+              {% else %}
+              <h3 class="subheader-text">Leave a comment</h3>
+              <form method="post" class="blog-form">
+                  {{ comment_form | crispy }}
+                  {% csrf_token %}
+                  <button type="submit" class="btn cta-btn mt-3">Submit</button>
+              </form>
+              {% endif %}
+          </div>
+      </div>
   </div>
 </div>
 
