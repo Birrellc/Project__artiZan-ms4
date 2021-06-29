@@ -213,9 +213,11 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 
 - As the owner i would like to be able to edit and delete products to the website.
 
-- As the owner i would like to provide a way for the user to contact us for example with a contact form.
+- As the owner i would like to provide a way for the user to contact us.
 
 - As the owner i would like to have social media icons present on the website for proofing.
+
+- As the owner i would like to have a blog where users can interact in order to develop community insight.
 
 
 #### Goals Derived From User Stories:
@@ -229,6 +231,8 @@ Final DB: [Heroku Postgres](https://www.heroku.com/postgres)
 - Secure login system.
 
 - Payment gateway (for users to make purchases).
+
+- Create a blog with commenting
 
 ---
 
