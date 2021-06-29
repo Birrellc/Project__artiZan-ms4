@@ -6,6 +6,11 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ## Table of Contents
 
+- [Validation Testing](#Validation-Testing)
+- [Responsive Testing](#Responsive-Testing)
+- [Lighthouse](#lighthouse)
+- [Manual Testing](#Manual-Testing)
+
 ---
 
 ## Validation Testing
