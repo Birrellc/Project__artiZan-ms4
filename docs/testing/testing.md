@@ -190,10 +190,31 @@ I ran a desktop and mobile test with google chromes build in lighthouse tool and
 | -----------------------------------------------------------|--------------------------------------------------------------|-----------|
 | Clicking on `Sign In` with correct username and password   | Directs user to the home page                                | Pass      |
 | Clicking on `Sign In` with Incorrect username and password | flash message to user showing incorrect username or password | Pass      |
-| Clicking on Forgot password                                | Opens "Forgot password" page                                 | Pass      |
+| Clicking on `Forgot password`                              | Opens "Forgot password" page                                 | Pass      |
 
 ### Profile
 
 | Functionality                                              | Expected Outcome                                             | Pass/Fail |
 | -----------------------------------------------------------|--------------------------------------------------------------|-----------|
+| Filling out form and clicking `update information`         | Updates the users delivery information                       | Pass      |
+| Clicking on an order number in order history section       | Loads up the order details for that specific order           | Pass      |
 
+
+## Basket
+
+| Functionality                                                 | Expected Outcome                                                             | Pass/Fail |
+| --------------------------------------------------------------|------------------------------------------------------------------------------|-----------|
+| If no items in basket display `your basket is empty`          | When there are no items in the basket message is displayed                   | Pass      |
+| Clicking `keep shopping` button returns to store              | When clicked returns user to the store as expected                           | Pass      |
+| Error messages                                                | Incorrect payment details shows an error message                             | Pass      |
+| Clicking `adjust basket` button                               | Returns user to basket as expected                                           | Pass      |
+| Clicking `Complete Order` button                              | Completes payment successfully if correct payment details                    | Pass      |
+
+## Checkout
+
+| Functionality                                                 | Expected Outcome                                                             | Pass/Fail |
+| --------------------------------------------------------------|------------------------------------------------------------------------------|-----------|
+| Correct order info displayed                                  | The order from the basket to be the same                                     | Pass      |
+| Users Delivery info be displayed if they updated in my profile| Previously entered data was there prefilled                                  | Pass      |
+| Clicking `secure checkout` button takes user to checkout page | When clicked takes user to checkout page as expected with correct order info | Pass      |
+| Clicking `delete` icon                                        | Correctly removes the product from the users basket                          | Pass      |
