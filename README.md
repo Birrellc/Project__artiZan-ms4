@@ -1,5 +1,7 @@
 # ArtiZan
 
+Python, Django, Postgresql
+
 ---
 
 ## Description
