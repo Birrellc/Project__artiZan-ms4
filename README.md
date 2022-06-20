@@ -1,6 +1,6 @@
 # ArtiZan
 
-[Live Site](https://github.com/Birrellc/Project__artiZan-ms4/deployments/activity_log?environment=artizan-prints)
+[Live Site](https://artizan-prints.herokuapp.com/)
 
 ---
 
