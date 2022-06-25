@@ -21,6 +21,11 @@ def add_to_basket(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
 
+    ''' 
+    if there is an item of the same kind in the basket alteast increase the quanitity otherwise just add it to basket
+    assign the basket contents to the session storage and redirect to the page
+    '''
+
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
     else:

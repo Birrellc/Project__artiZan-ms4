@@ -4,6 +4,14 @@ from django.shortcuts import get_object_or_404
 from products.models import Art
 
 
+'''
+for items in shopping basket, multiple the quanity times product.price
+push an object with the product quanity and id into an object array
+if the total price is below the free delivery threshold format the delivery cost
+also show the user how much more they would have to spend to get free delivery
+if the threshold is met assign the delivery cost to 0
+'''
+
 def basket_contents(request):
 
     basket_items = []
