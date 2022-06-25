@@ -11,6 +11,8 @@ import json
 import time
 
 
+# Majority of the code in this webhook is from the code institute course
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 

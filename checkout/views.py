@@ -14,6 +14,7 @@ from basket.contexts import basket_contents
 import stripe
 import json
 
+# Majority of the code in this view is from the code institute course
 
 @require_POST
 def cache_checkout_data(request):
